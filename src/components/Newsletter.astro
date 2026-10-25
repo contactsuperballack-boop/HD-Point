@@ -1,0 +1,18 @@
+---
+// Shown only when PUBLIC_NEWSLETTER_URL is set (your email provider's form address), so there is never a dead box.
+const url = import.meta.env.PUBLIC_NEWSLETTER_URL ?? '';
+const field = import.meta.env.PUBLIC_NEWSLETTER_FIELD ?? 'email';
+const { place = 'page' } = Astro.props;
+---
+{url && (
+  <section class="signup" aria-labelledby={`signup-${place}`}>
+    <h2 id={`signup-${place}`}>Get the weekly digest</h2>
+    <p>One email a week with our latest posts and how well each one is sourced. Unsubscribe any time.</p>
+    <form action={url} method="post" target="_blank" rel="noopener" data-track="Newsletter signup">
+      <label class="sr" for={`email-${place}`}>Email address</label>
+      <input id={`email-${place}`} type="email" name={field} required autocomplete="email" placeholder="you@example.com" />
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
+    <p class="fine">We use your email only to send the digest. <a href="/privacy/">Privacy</a></p>
+  </section>
+)}

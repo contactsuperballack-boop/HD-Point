@@ -1,0 +1,22 @@
+name = "blog-submit"
+main = "submit.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://example.com"   # your site's origin, no trailing slash (also blocks other sites from posting)
+GITHUB_REPO = "your-user/your-repo"
+GITHUB_BRANCH = "main"
+
+# Secrets (never put these in this file):
+#   wrangler secret put GITHUB_TOKEN
+#   wrangler secret put TURNSTILE_SECRET     (from the Cloudflare Turnstile widget you create for your site)
+
+# Optional but recommended KV stores. Create each with `wrangler kv namespace create NAME`, then uncomment:
+# CONTACTS keeps submitters' contact emails out of the repo. LIMITS stores the per-IP rate-limit counters.
+# [[kv_namespaces]]
+# binding = "CONTACTS"
+# id = "<id>"
+#
+# [[kv_namespaces]]
+# binding = "LIMITS"
+# id = "<id>"

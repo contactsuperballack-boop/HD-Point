@@ -1,0 +1,8 @@
+---
+import PostCard from './PostCard.astro';
+const { posts, lead = false } = Astro.props;
+---
+<ul class="grid" id="posts">
+  {posts.map((p, i) => <PostCard post={p} lead={lead && i === 0} />)}
+</ul>
+<p id="nomatch" role="status" hidden>No posts match your search.</p>

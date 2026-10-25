@@ -1,0 +1,131 @@
+---
+import '../styles/global.css';
+import cfg from '../../config.json';
+import { visiblePosts } from '../data/posts';
+import { allDigests } from '../data/digests';
+import { TOPICS } from '../data/topics';
+
+const { title, description = cfg.tagline, image, type = 'website', jsonLd } = Astro.props;
+const SITE = cfg.siteName; // set in config.json
+const posts = await visiblePosts();
+const has = (t) => posts.some((p) => t.match(p.data));
+const inGroup = (g) => TOPICS.filter((t) => t.group === g && has(t)).map((t) => ({ label: t.label, href: `/topics/${t.slug}/` }));
+const groups = [
+  { id: 'topics', label: 'Topics', items: inGroup('topics') },
+  { id: 'sectors', label: 'Sectors', items: inGroup('sectors') },
+  { id: 'news', label: 'News', items: [{ label: 'Latest', href: '/' }, ...inGroup('news')] },
+  { id: 'events', label: 'Events', href: '/events/' },
+  { id: 'more', label: 'More', right: true, items: [
+    ...inGroup('more'),
+    ...(allDigests().length ? [{ label: 'Weekly digest', href: '/digest/' }] : []),
+    { label: 'Data', href: '/data/' },
+    { label: 'Corrections', href: '/corrections/' },
+    { label: 'About', href: '/about/' },
+    { label: 'How we verify', href: '/how-we-verify/' },
+    { label: 'Submit a startup', href: '/submit/' },
+    { label: 'RSS feed', href: '/rss.xml' },
+    ...(cfg.contactEmail ? [{ label: 'Contact', href: `mailto:${cfg.contactEmail}` }] : []),
+  ] },
+].filter((g) => g.href || g.items.length);
+const path = Astro.url.pathname;
+const here = (href) => (href === '/' ? path === '/' : href.startsWith('/') && !href.endsWith('.xml') && path.startsWith(href));
+const fullTitle = title ? `${title} | ${SITE}` : SITE;
+const ogImage = Astro.site ? new URL(image || '/brand/og-default.png', Astro.site).href : undefined;
+const canonical = Astro.site ? new URL(path, Astro.site).href : undefined;
+const analyticsSrc = import.meta.env.PUBLIC_ANALYTICS_SRC ?? '';
+const analyticsId = import.meta.env.PUBLIC_ANALYTICS_ID ?? '';
+const LABEL = { instagram: 'Instagram', facebook: 'Facebook', tiktok: 'TikTok', youtube: 'YouTube', x: 'X', linkedin: 'LinkedIn' };
+const social = Object.entries(cfg.social?.profiles ?? {}).filter(([, u]) => u);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:site_name" content={SITE} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <script is:inline>document.documentElement.classList.add("js")</script>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <meta name="theme-color" content="#1B2A6B" />
+    <link rel="alternate" type="application/rss+xml" title={SITE} href="/rss.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    {analyticsSrc && <script defer src={analyticsSrc} data-domain={analyticsId} data-website-id={analyticsId}></script>}
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />}
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site">
+      <div class="wrap bar">
+        <a class="brand" href="/" aria-label={SITE}>
+          <picture>
+            <source srcset="/brand/logo-dark.svg" media="(prefers-color-scheme: dark)" />
+            <img src="/brand/logo.svg" alt={SITE} width="112" height="34" />
+          </picture>
+        </a>
+        <button class="menubtn" type="button" aria-expanded="false" aria-controls="mainnav">Menu</button>
+        <nav id="mainnav" class="mainnav" aria-label="Main">
+          <ul>
+            {groups.map((g) => g.items ? (
+              <li class:list={['dd', { right: g.right }]}>
+                <button type="button" class:list={['ddbtn', { active: g.items.some((i) => here(i.href)) }]} aria-expanded="false" aria-controls={`dd-${g.id}`}>{g.label}</button>
+                <ul class="ddpanel" id={`dd-${g.id}`}>
+                  {g.items.map((i) => <li><a href={i.href} aria-current={here(i.href) ? 'page' : undefined}>{i.label}</a></li>)}
+                </ul>
+              </li>
+            ) : (
+              <li><a class="nl" href={g.href} aria-current={here(g.href) ? 'page' : undefined}>{g.label}</a></li>
+            ))}
+            <li class="navcta"><a class="cta" href="/submit/">Submit a startup</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap" id="main"><slot /></main>
+    <footer class="wrap foot">
+      <p>Posts are AI-assisted and linked to their sources. Sponsored posts are labelled.</p>
+      <p>
+        <a href="/about/">About</a>
+        <a href="/how-we-verify/">How we verify</a>
+        <a href="/corrections/">Corrections</a>
+        <a href="/events/">Events</a>
+        <a href="/submit/">Submit a startup</a>
+        <a href="/rss.xml">RSS</a>
+        <a href="/privacy/">Privacy</a>
+        {cfg.contactEmail && <a href={`mailto:${cfg.contactEmail}`}>Contact</a>}
+      </p>
+      {social.length > 0 && <p>Follow us: {social.map(([k, u]) => <a href={u} rel="noopener">{LABEL[k] ?? k}</a>)}</p>}
+    </footer>
+    <script is:inline>
+      (function () {
+        window.track = function (name, props) { try { if (window.plausible) window.plausible(name, { props: props }); else if (window.umami && window.umami.track) window.umami.track(name, props); } catch (e) {} };
+        document.addEventListener('submit', function (e) { var t = e.target && e.target.getAttribute && e.target.getAttribute('data-track'); if (t) window.track(t); });
+        document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href^="http"]'); if (a && a.hostname !== location.hostname && a.closest('.prose')) window.track('Outbound source click', { host: a.hostname }); });
+        var btns = [].slice.call(document.querySelectorAll('.ddbtn')), menu = document.querySelector('.menubtn'), nav = document.getElementById('mainnav');
+        function setOpen(b, open) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); document.getElementById(b.getAttribute('aria-controls')).hidden = !open; }
+        function closeAll(except) { btns.forEach(function (b) { if (b !== except) setOpen(b, false); }); }
+        btns.forEach(function (b) {
+          setOpen(b, false);
+          b.addEventListener('click', function () { var open = b.getAttribute('aria-expanded') !== 'true'; closeAll(b); setOpen(b, open); });
+        });
+        if (menu) menu.addEventListener('click', function () { var o = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', o ? 'true' : 'false'); nav.classList.toggle('open', o); });
+        document.addEventListener('click', function (e) { if (!e.target.closest('.dd')) closeAll(); });
+        document.addEventListener('keydown', function (e) {
+          if (e.key !== 'Escape') return;
+          var open = btns.filter(function (b) { return b.getAttribute('aria-expanded') === 'true'; })[0];
+          closeAll(); if (open) open.focus();
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "ai-blog-engine",
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "blog": "node engine/run.js",
+    "blog:mock": "node engine/run.js --mock",
+    "export": "python3 engine/export.py",
+    "watch": "python3 engine/watch.py",
+    "samples": "node engine/samples.js",
+    "logo": "python3 brand/build_logo.py"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}

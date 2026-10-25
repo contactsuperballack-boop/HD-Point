@@ -1,0 +1,54 @@
+{
+  "slug": "ignite-sets-out-six-on-demand-ai-services-delivered-remotely-from-afri",
+  "title": "Ignite sets out six on-demand AI services, delivered remotely from Africa",
+  "type": "startup_feature",
+  "topics": [
+    "ai",
+    "innovation"
+  ],
+  "region": "Africa",
+  "date": "2026-10-24T07:15:48.288Z",
+  "sponsored": false,
+  "sectors": [],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Ignite describes itself as an SI-native company that provides products, data, experts, evaluation, benchmarks and intelligence as a service.",
+      "sourceUrl": "https://ignite-live-beta.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c2",
+      "text": "The company says it delivers this work through three arms: iBuild, iStudios and Ignite Academy.",
+      "sourceUrl": "https://ignite-live-beta.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c3",
+      "text": "Ignite lists six services, each offered as a service: SI products, data, experts, evaluation, benchmark and intelligence.",
+      "value": 6,
+      "unit": "services",
+      "label": "Services offered",
+      "sourceUrl": "https://ignite-live-beta.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c4",
+      "text": "It says it works remotely from Africa so that teams anywhere can work with it.",
+      "sourceUrl": "https://ignite-live-beta.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c5",
+      "text": "Ignite says it is part of Trustbridge Corp, which provides its ownership, governance and long-term direction.",
+      "sourceUrl": "https://ignite-live-beta.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c6",
+      "text": "The company says Ignite Academy develops SI-native experts, with capstone projects and portfolios as part of the programme.",
+      "sourceUrl": "https://ignite-live-beta.vercel.app/",
+      "basis": "company-stated"
+    }
+  ]
+}

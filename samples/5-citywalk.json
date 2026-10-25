@@ -1,0 +1,56 @@
+{
+  "factSheet": {
+    "title": "Abuja City Walk sets out a five-pillar plan for a mixed-use urban district",
+    "storyType": "local_news",
+    "region": "Nigeria",
+    "topics": [
+      "lifestyle",
+      "innovation"
+    ],
+    "embedUrl": null,
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Abuja City Walk says its vision is to create Africa's most dynamic urban district, blending world-class infrastructure with cultural authenticity and sustainable living.",
+        "sourceUrl": "https://abujacitywalk.com/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c2",
+        "text": "The project describes itself as an integrated lifestyle destination in Abuja, planned to foster economic growth, cultural exchange and community well-being.",
+        "sourceUrl": "https://abujacitywalk.com/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c3",
+        "text": "It lists five pillars: Business, Lifestyle, Innovation, Culture and Community.",
+        "sourceUrl": "https://abujacitywalk.com/",
+        "basis": "company-stated",
+        "value": 5,
+        "unit": "pillars",
+        "label": "Pillars listed"
+      },
+      {
+        "id": "c4",
+        "text": "Under Innovation, the project says it is driving technological advancement and smart city solutions for sustainable urban development.",
+        "sourceUrl": "https://abujacitywalk.com/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c5",
+        "text": "The website lists project pages for a masterplan, residences, an experience centre and a free zone.",
+        "sourceUrl": "https://abujacitywalk.com/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c6",
+        "text": "The site says property purchase inquiries should go only to its official email channel, and that the management of Links International is not responsible for dealings with unauthorised persons.",
+        "sourceUrl": "https://abujacitywalk.com/",
+        "basis": "company-stated"
+      }
+    ],
+    "flashcards": []
+  },
+  "article": "Abuja City Walk says its vision is to create Africa's most dynamic urban district, blending world-class infrastructure with cultural authenticity and sustainable living. [c1] The project describes itself as an integrated lifestyle destination in Abuja, planned to foster economic growth, cultural exchange and community well-being. [c2]\n\n> **Key facts**\n>\n> - It lists five pillars: Business, Lifestyle, Innovation, Culture and Community. [c3]\n> - Under Innovation, the project says it is driving technological advancement and smart city solutions for sustainable urban development. [c4]\n> - The website lists project pages for a masterplan, residences, an experience centre and a free zone. [c5]\n\n## The details\n\nFor buyers, the site says property purchase inquiries should go only to its official email channel, and that the management of Links International is not responsible for dealings with unauthorised persons. [c6]",
+  "dek": "Abuja City Walk lists five pillars for a planned lifestyle district: business, lifestyle, innovation, culture and community."
+}

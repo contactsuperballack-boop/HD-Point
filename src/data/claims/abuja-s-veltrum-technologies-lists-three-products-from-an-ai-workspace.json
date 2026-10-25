@@ -1,0 +1,66 @@
+{
+  "slug": "abuja-s-veltrum-technologies-lists-three-products-from-an-ai-workspace",
+  "title": "Abuja's Veltrum Technologies lists three products, from an AI workspace to electricity purchases",
+  "type": "startup_feature",
+  "topics": [
+    "ai",
+    "innovation"
+  ],
+  "region": "Nigeria",
+  "date": "2026-10-24T07:15:48.287Z",
+  "sponsored": false,
+  "sectors": [],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Veltrum Technologies says it builds secure software, AI systems and digital infrastructure for organisations across Africa.",
+      "sourceUrl": "https://veltrumtech.com",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c2",
+      "text": "The company is based in Abuja, Nigeria, and says it works across Africa.",
+      "sourceUrl": "https://veltrumtech.com",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c3",
+      "text": "Its website lists three products: Afro AI, Accessum and GetElectric.",
+      "value": 3,
+      "unit": "products",
+      "label": "Products listed",
+      "sourceUrl": "https://veltrumtech.com",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c4",
+      "text": "Afro AI is described as a document-grounded workspace for conversation, learning and organisational knowledge.",
+      "sourceUrl": "https://veltrumtech.com",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c5",
+      "text": "Accessum is described as guest and security management designed for the operating realities of gated communities.",
+      "sourceUrl": "https://veltrumtech.com",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c6",
+      "text": "GetElectric is described as a direct electricity purchase experience shaped for quick, essential everyday transactions.",
+      "sourceUrl": "https://veltrumtech.com",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c7",
+      "text": "Veltrum says its approach is to define constraints, ownership and failure modes before implementation begins.",
+      "sourceUrl": "https://veltrumtech.com",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c8",
+      "text": "The site names seven team members, five of them as co-founders.",
+      "sourceUrl": "https://veltrumtech.com",
+      "basis": "company-stated"
+    }
+  ]
+}

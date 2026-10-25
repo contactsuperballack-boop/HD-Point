@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+import { visiblePosts } from '../../data/posts';
+import { claimSets } from '../../data/claims';
+import { fmtDate, TYPE_LABEL } from '../../data/format';
+
+const posts = (await visiblePosts()).filter((p) => !p.data.draft);
+const sets = claimSets().filter((c) => posts.some((p) => p.id === c.slug));
+const total = sets.reduce((n, c) => n + c.claims.length, 0);
+const verified = sets.reduce((n, c) => n + c.claims.filter((x) => x.basis === 'verified').length, 0);
+const regions = [...new Set(posts.map((p) => p.data.region || 'Africa'))].sort();
+const types = [...new Set(posts.map((p) => p.data.type))].sort();
+const rows = posts.slice(0, 200);
+---
+<Base title="Data" description="Open data behind every post: each claim, its source, and whether it is verified or company-stated.">
+  <h1 class="pagetitle">Data</h1>
+  <p class="lead">Every post on this site is built from a list of claims. Here is that list as open data: each claim, its source link, and whether it is verified or only what the company says. Check the source before you rely on any claim.</p>
+
+  <p class="datastats"><strong>{posts.length}</strong> posts, <strong>{total}</strong> claims, <strong>{verified}</strong> of them verified by an independent source.</p>
+  <p>
+    <a class="btn" href="/data/posts.json" download>Download posts (JSON)</a>
+    <a class="btn alt" href="/data/claims.json" download>Download claims (JSON)</a>
+  </p>
+
+  {posts.length === 0 ? <p class="empty">No published posts yet.</p> : (<>
+    <div class="filters">
+      <label>Type <select id="ftype"><option value="">All</option>{types.map((t) => <option value={t}>{TYPE_LABEL[t] ?? t}</option>)}</select></label>
+      <label>Country <select id="fregion"><option value="">All</option>{regions.map((r) => <option value={r}>{r}</option>)}</select></label>
+    </div>
+    <div class="tablewrap">
+      <table class="data">
+        <thead><tr><th>Date</th><th>Post</th><th>Type</th><th>Country</th><th>Verified</th><th>Company says</th></tr></thead>
+        <tbody>
+          {rows.map((p) => (
+            <tr data-type={p.data.type} data-region={p.data.region || 'Africa'}>
+              <td>{fmtDate(p.data.date)}</td>
+              <td><a href={`/posts/${p.id}/`}>{p.data.title}</a>{p.data.sponsored && <span class="chip">Sponsored</span>}</td>
+              <td>{TYPE_LABEL[p.data.type] ?? p.data.type}</td>
+              <td>{p.data.region || 'Africa'}</td>
+              <td>{p.data.verified}</td>
+              <td>{p.data.stated}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </>)}
+
+  <script is:inline>
+    (function () {
+      var t = document.getElementById('ftype'), r = document.getElementById('fregion'); if (!t) return;
+      var rows = [].slice.call(document.querySelectorAll('table.data tbody tr'));
+      function apply() { rows.forEach(function (tr) { tr.hidden = !((!t.value || tr.dataset.type === t.value) && (!r.value || tr.dataset.region === r.value)); }); }
+      t.addEventListener('change', apply); r.addEventListener('change', apply);
+    })();
+  </script>
+</Base>

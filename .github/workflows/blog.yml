@@ -1,0 +1,69 @@
+name: Generate posts
+on:
+  schedule:
+    - cron: '0 6 * * *'   # daily 06:00 UTC = 07:00 Lagos
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: blog-run
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser tools
+        continue-on-error: true
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Read watched company pages
+        continue-on-error: true   # a site being down must not stop the run
+        run: python engine/watch.py
+      - name: Run pipeline
+        run: node engine/run.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Export infographic PNGs and report PDFs
+        continue-on-error: true   # a failed export must not block publishing the post
+        run: python engine/export.py
+      - name: Social posting kit
+        continue-on-error: true   # never block publishing because of a social problem
+        run: node engine/social.js
+        env:
+          SOCIAL_WEBHOOK_URL: ${{ secrets.SOCIAL_WEBHOOK_URL }}
+      - name: Commit new posts
+        id: commit
+        run: |
+          git config user.name "blog-bot"
+          git config user.email "blog-bot@users.noreply.github.com"
+          git add -A src/content src/data public/assets review-queue.json social social-log.json watch-cache watch-state.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Add generated posts"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open review issue for new drafts
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NEW=$(git show --name-only --pretty= HEAD | grep '^src/content/posts/' || true)
+          DRAFTS=""
+          for f in $NEW; do
+            if grep -q '^draft: true' "$f"; then DRAFTS="$DRAFTS- \`$f\`\n"; fi
+          done
+          if [ -n "$DRAFTS" ]; then
+            printf "These posts are drafts and are not on the site yet.\n\nReview each one, then set \`draft: false\` in its front matter and push.\n\n$DRAFTS" > body.md
+            gh issue create --title "Posts awaiting review ($(date -u +%F))" --body-file body.md
+          fi

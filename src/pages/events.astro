@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import cfg from '../../config.json';
+import events from '../data/events.json';
+import { fmtDate } from '../data/format';
+
+// Add events to src/data/events.json. Each: { "title", "date": "2026-11-12", "endDate"?, "city", "country", "url", "description"?, "format"?: "In person" | "Online" }
+// The site is rebuilt after every scheduled run, so events drop off this page once they have passed.
+const today = new Date().toISOString().slice(0, 10);
+const upcoming = (events as any[])
+  .filter((e) => (e.endDate ?? e.date) >= today)
+  .sort((a, b) => a.date.localeCompare(b.date));
+const safe = (u: string) => (/^https?:\/\//.test(u) ? u : undefined);
+---
+<Base title="Events" description="Upcoming AI and startup events in Nigeria and across Africa.">
+  <div class="narrow">
+    <h1 class="pagetitle">Events</h1>
+    <p class="lead">Upcoming AI and startup events in Nigeria and across Africa.</p>
+
+    {upcoming.length === 0 && <p class="empty">No upcoming events listed yet.</p>}
+    <ul class="eventlist">
+      {upcoming.map((e) => (
+        <li class="event">
+          <time datetime={e.date}>{fmtDate(new Date(e.date))}{e.endDate && e.endDate !== e.date ? ` to ${fmtDate(new Date(e.endDate))}` : ''}</time>
+          <div>
+            <h2>{safe(e.url) ? <a href={safe(e.url)} rel="noopener noreferrer">{e.title}</a> : e.title}</h2>
+            <p>{[e.format, [e.city, e.country].filter(Boolean).join(', ')].filter(Boolean).join(', ')}</p>
+            {e.description && <p>{e.description}</p>}
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    {cfg.contactEmail && <p>Know of an event for Africa's AI community? <a href={`mailto:${cfg.contactEmail}`}>Email us the details</a>.</p>}
+  </div>
+</Base>

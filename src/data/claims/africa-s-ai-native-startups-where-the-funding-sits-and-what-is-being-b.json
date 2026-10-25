@@ -1,0 +1,114 @@
+{
+  "slug": "africa-s-ai-native-startups-where-the-funding-sits-and-what-is-being-b",
+  "title": "Africa's AI-native startups: where the funding sits and what is being built",
+  "type": "ecosystem",
+  "topics": [
+    "ai",
+    "innovation"
+  ],
+  "region": "Africa",
+  "date": "2026-10-24T07:15:48.290Z",
+  "sponsored": false,
+  "sectors": [
+    "voice-language",
+    "agri-climate"
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Nigerian startups raised $635 million between January and September 2026, according to data from Africa: The Big Deal.",
+      "value": 635,
+      "unit": "million dollars",
+      "label": "Nigeria",
+      "sourceUrl": "https://innovation-village.com/nigeria-reclaims-africas-startup-funding-lead-as-investments-rise-to-635-million/",
+      "basis": "verified"
+    },
+    {
+      "id": "c2",
+      "text": "Egypt raised $445 million in the same period, according to Africa: The Big Deal.",
+      "value": 445,
+      "unit": "million dollars",
+      "label": "Egypt",
+      "sourceUrl": "https://thewillnews.com/nigeria-leads-africas-10-biggest-startup-funding-markets-with-635m/",
+      "basis": "verified"
+    },
+    {
+      "id": "c3",
+      "text": "Kenyan startups raised $201 million in the first nine months of 2026.",
+      "value": 201,
+      "unit": "million dollars",
+      "label": "Kenya",
+      "sourceUrl": "https://technext24.com/news/nigerian-startups-raised-635-million-in-2026/",
+      "basis": "verified"
+    },
+    {
+      "id": "c4",
+      "text": "South Africa raised $182 million in the same period, the least of the four largest markets.",
+      "value": 182,
+      "unit": "million dollars",
+      "label": "South Africa",
+      "sourceUrl": "https://technext24.com/news/nigerian-startups-raised-635-million-in-2026/",
+      "basis": "verified"
+    },
+    {
+      "id": "c5",
+      "text": "Nigeria, Egypt, Kenya and South Africa together took 85% of all country-specific startup funding, up from 83% in 2025.",
+      "sourceUrl": "https://innovation-village.com/nigeria-reclaims-africas-startup-funding-lead-as-investments-rise-to-635-million/",
+      "basis": "verified"
+    },
+    {
+      "id": "c6",
+      "text": "In the first half of 2026, fintech was the largest funded sector at 41% ($556 million), ahead of logistics and transport at 35% ($472 million) and agriculture and food at 7% ($93 million).",
+      "sourceUrl": "https://bitcoinke.io/2026/08/africa-startup-funding-in-h1-2026/",
+      "basis": "verified"
+    },
+    {
+      "id": "c7",
+      "text": "Tanzania, Côte d’Ivoire and Morocco each attracted more than $25 million in the first half of 2026, as capital spread beyond the four largest markets.",
+      "sourceUrl": "https://www.techinafrica.com/egypt-tops-africas-h1-2026-startup-funding-but-nigeria-reclaims-the-equity-crown/",
+      "basis": "verified"
+    },
+    {
+      "id": "c8",
+      "text": "UNESCO estimates that Africa is home to between 1,500 and 3,000 languages, according to a profile of Botlhale AI.",
+      "sourceUrl": "https://www.startup.africa/botlhale-ai-pioneering-inclusive-african-language-tech-for-ai-growth/",
+      "basis": "verified"
+    },
+    {
+      "id": "c9",
+      "text": "Botlhale AI, a South African startup, builds speech recognition and language tools for African languages, aimed at call centres.",
+      "sourceUrl": "https://iafrica.com/botlhale-ai-brings-speech-recognition-to-african-languages-in-call-centers/",
+      "basis": "verified"
+    },
+    {
+      "id": "c10",
+      "text": "Botlhale says up to 70% of calls in South Africa are in languages other than English.",
+      "sourceUrl": "https://www.dabafinance.com/en/news/south-africas-botlhale-ai-builds-speech-tech-for-african-languages",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c11",
+      "text": "The company says its models support 11 South African languages and it is expanding to Ghana, Kenya and Nigeria.",
+      "sourceUrl": "https://iafrica.com/botlhale-ai-brings-speech-recognition-to-african-languages-in-call-centers/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c12",
+      "text": "Amini, a Kenyan startup, uses satellite imagery and AI to map environmental and agricultural data, including soil, vegetation and carbon levels.",
+      "sourceUrl": "https://thecondia.com/african-startups-ai-problems/",
+      "basis": "verified"
+    },
+    {
+      "id": "c13",
+      "text": "Aerobotics, a South African company, combines AI, drones and data analytics to help farmers monitor crop health.",
+      "sourceUrl": "https://thecondia.com/african-startups-ai-problems/",
+      "basis": "verified"
+    },
+    {
+      "id": "c14",
+      "text": "Africa: The Big Deal is expected to publish a consolidated 2026 funding review before year-end, which will show whether Egypt's 27% share of first-half funding holds.",
+      "sourceUrl": "https://www.capmad.com/post/egypt-emerges-as-africas-top-startup-funding-market-in-h1-2026",
+      "basis": "verified"
+    }
+  ]
+}

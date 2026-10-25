@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Inter,Arial,sans-serif">
+<rect width="1200" height="630" fill="#1B2A6B"/><rect width="14" height="630" fill="#F2B134"/>
+<text x="60" y="110" font-size="24" fill="#F2B134">Startup feature, Nigeria</text>
+<text x="60" y="210" font-size="42" font-weight="700" fill="#fff">Abuja's Veltrum Technologies</text><text x="60" y="262" font-size="42" font-weight="700" fill="#fff">lists three products, from an</text><text x="60" y="314" font-size="42" font-weight="700" fill="#fff">AI workspace to electricity</text>
+<text x="60" y="540" font-size="64" font-weight="800" fill="#F2B134">3 products</text><text x="60" y="580" font-size="22" fill="#C9CDE0">Products listed</text>
+<text x="1078" y="580" font-size="26" font-weight="700" fill="#F2B134" text-anchor="end">HD Point</text><g transform="translate(1094 548) scale(0.4)"><g fill="none" stroke="#C4CEFF" stroke-width="14"><path d="M10 0V100"/><path d="M54 0V100"/><path d="M54 7H66A43 43 0 0 1 66 93H54"/><path d="M10 50H54"/></g><circle cx="32" cy="50" r="5.4" fill="#F2B134"/></g>
+</svg>

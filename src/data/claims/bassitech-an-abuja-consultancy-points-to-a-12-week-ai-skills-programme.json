@@ -1,0 +1,75 @@
+{
+  "slug": "bassitech-an-abuja-consultancy-points-to-a-12-week-ai-skills-programme",
+  "title": "BassiTech, an Abuja consultancy, points to a 12-week AI skills programme for 100 young people",
+  "type": "startup_feature",
+  "topics": [
+    "ai",
+    "innovation"
+  ],
+  "region": "Nigeria",
+  "date": "2026-10-24T07:15:48.285Z",
+  "sponsored": false,
+  "sectors": [],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "BassiTech Solutions describes itself as an Abuja-based technology consulting company offering strategy, software, proposals and digital skills.",
+      "sourceUrl": "https://bassi-tech.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c2",
+      "text": "The company says it serves businesses and organisations in fintech, telecoms, agriculture and media.",
+      "sourceUrl": "https://bassi-tech.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c3",
+      "text": "BassiTech says its Digital Wings Initiative is an AI-focused digital skills programme in Taraba State.",
+      "sourceUrl": "https://bassi-tech.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c4",
+      "text": "The programme is designed for 100 young people.",
+      "value": 100,
+      "unit": "young people",
+      "label": "Programme participants",
+      "sourceUrl": "https://bassi-tech.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c5",
+      "text": "The programme runs for 12 weeks.",
+      "value": 12,
+      "unit": "weeks",
+      "label": "Programme length",
+      "sourceUrl": "https://bassi-tech.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c6",
+      "text": "The company says it has designed 2 farming programmes for Kudan LGA.",
+      "value": 2,
+      "unit": "farming programmes",
+      "label": "Programmes for Kudan LGA",
+      "sourceUrl": "https://bassi-tech.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c7",
+      "text": "The site lists 5 projects and ventures in its case studies.",
+      "value": 5,
+      "unit": "projects",
+      "label": "Projects featured",
+      "sourceUrl": "https://bassi-tech.vercel.app/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c8",
+      "text": "BassiTech says it is led by founder Anas Abubakar Bassi, a Computer Engineer who studied at Ahmadu Bello University, Zaria.",
+      "sourceUrl": "https://bassi-tech.vercel.app/",
+      "basis": "company-stated"
+    }
+  ]
+}

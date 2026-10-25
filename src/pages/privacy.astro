@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import cfg from '../../config.json';
+const analyticsOn = !!import.meta.env.PUBLIC_ANALYTICS_SRC;
+const newsletterOn = !!import.meta.env.PUBLIC_NEWSLETTER_URL;
+const submitOn = !!import.meta.env.PUBLIC_SUBMIT_URL;
+---
+<Base title="Privacy" description={`How ${cfg.siteName} handles your data.`}>
+  <div class="narrow">
+    <h1 class="pagetitle">Privacy</h1>
+    <p class="lead">This page explains what data {cfg.siteName} collects and why. We collect as little as we can.</p>
+    <article class="prose pageprose">
+      <h2>Reading the site</h2>
+      {analyticsOn
+        ? <p>We use a privacy-focused analytics tool to count page views and actions such as shares and sign-ups. It is designed not to use cookies or to follow you across other sites.</p>
+        : <p>We do not run analytics on this site.</p>}
+      <p>The site loads its fonts from Google Fonts, so Google receives your IP address when a page loads.</p>
+
+      {newsletterOn && (<>
+        <h2>The weekly digest</h2>
+        <p>If you subscribe, your email address is held by our email provider and used only to send the digest. Every email has an unsubscribe link, and unsubscribing stops further emails.</p>
+      </>)}
+
+      {submitOn && (<>
+        <h2>Submitting a startup or product</h2>
+        <p>The company details and facts you submit are saved so we can review them, and may be published if we accept them. Your contact email is stored separately, is not published, and is used only to contact you about your submission. The form uses Cloudflare Turnstile to block automated spam, which processes some technical data about your browser.</p>
+      </>)}
+
+      <h2>Your rights and contact</h2>
+      <p>You can ask us what we hold about you, or ask us to correct or delete it.{cfg.contactEmail && <> Email <a href={`mailto:${cfg.contactEmail}`}>{cfg.contactEmail}</a>.</>}</p>
+    </article>
+  </div>
+</Base>

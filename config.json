@@ -1,0 +1,241 @@
+{
+  "siteName": "HD Point",
+  "autoPublish": false,
+  "maxStoryAgeDays": 5,
+  "minSourcesNews": 2,
+  "minSourcesPromo": 1,
+  "postsPerRun": 3,
+  "model": "claude-sonnet-5-5",
+  "requireSponsoredLabel": true,
+  "assets": {
+    "hero": true,
+    "chart": true,
+    "flashcards": true,
+    "embed": true,
+    "infographic": true,
+    "deck": true,
+    "report": true
+  },
+  "lane": [
+    "accelerator",
+    "africa",
+    "agent",
+    "agriculture",
+    "agritech",
+    "ai",
+    "cairo",
+    "cape town",
+    "climate",
+    "credit",
+    "culture",
+    "data center",
+    "data centre",
+    "digital",
+    "drone",
+    "edge",
+    "entertainment",
+    "farm",
+    "fintech",
+    "funding",
+    "gpu",
+    "health",
+    "hospitality",
+    "hub",
+    "innovation",
+    "lagos",
+    "language",
+    "leisure",
+    "lifestyle",
+    "llm",
+    "microfinance",
+    "model",
+    "nairobi",
+    "nigeria",
+    "nlp",
+    "policy",
+    "regulation",
+    "satellite",
+    "smart city",
+    "sovereignty",
+    "speech",
+    "startup",
+    "telemedicine",
+    "tourism",
+    "translation",
+    "travel",
+    "ussd",
+    "voice",
+    "wellness",
+    "whatsapp"
+  ],
+  "feeds": [
+    {
+      "name": "TechCabal",
+      "url": "https://techcabal.com/feed/",
+      "filter": "lane"
+    },
+    {
+      "name": "Disrupt Africa",
+      "url": "https://disruptafrica.com/feed/",
+      "filter": "lane"
+    },
+    {
+      "name": "IT News Africa",
+      "url": "https://www.itnewsafrica.com/feed/",
+      "filter": "lane"
+    },
+    {
+      "name": "Techpoint Africa",
+      "url": "https://techpoint.africa/feed/",
+      "filter": "lane"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/news/rss.xml",
+      "filter": "none"
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "filter": "none"
+    },
+    {
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "filter": "none"
+    },
+    {
+      "name": "Microsoft AI",
+      "url": "https://news.microsoft.com/source/topics/ai/feed/",
+      "filter": "none"
+    }
+  ],
+  "bannedPhrases": [
+    "revolutionary",
+    "game-changer",
+    "game changing",
+    "groundbreaking",
+    "unprecedented"
+  ],
+  "maxExtraAssets": 3,
+  "autoPublishSponsored": false,
+  "contactEmail": "info.timelapseai@gmail.com",
+  "siteUrl": "",
+  "maxPerFeed": 4,
+  "autoPublishTypes": [],
+  "autoPublishGate": {
+    "minReviewed": 10,
+    "maxCorrectionRate": 0.02,
+    "windowDays": 90
+  },
+  "social": {
+    "enabled": true,
+    "maxAgeDays": 3,
+    "platforms": [
+      "x",
+      "linkedin",
+      "whatsapp",
+      "facebook",
+      "instagram"
+    ],
+    "profiles": {
+      "instagram": "",
+      "facebook": "",
+      "tiktok": "",
+      "youtube": "",
+      "x": "",
+      "linkedin": ""
+    }
+  },
+  "tagline": "AI, innovation, leisure and lifestyle updates from Nigeria and across Africa. Every claim shows its source.",
+  "topics": [
+    "ai",
+    "innovation",
+    "leisure",
+    "lifestyle"
+  ],
+  "watch": [
+    {
+      "id": "ignite",
+      "name": "Ignite",
+      "url": "https://ignite-live-beta.vercel.app/",
+      "type": "page",
+      "topics": [
+        "ai",
+        "innovation"
+      ]
+    },
+    {
+      "id": "veltrum",
+      "name": "Veltrum Technologies",
+      "url": "https://www.veltrumtech.com",
+      "type": "page",
+      "topics": [
+        "ai",
+        "innovation"
+      ]
+    },
+    {
+      "id": "bassitech",
+      "name": "BassiTech Solutions",
+      "url": "https://bassi-tech.vercel.app/",
+      "type": "page",
+      "topics": [
+        "ai",
+        "innovation"
+      ]
+    },
+    {
+      "id": "smartel",
+      "name": "Smartel Agritech",
+      "url": "https://www.smartelco.org",
+      "type": "page",
+      "topics": [
+        "innovation"
+      ]
+    },
+    {
+      "id": "chassis",
+      "name": "Chassis by The Data Vessel",
+      "url": "https://chassis.thedatavessel.com",
+      "type": "page",
+      "topics": [
+        "ai",
+        "innovation"
+      ]
+    },
+    {
+      "id": "citywalk",
+      "name": "Abuja City Walk",
+      "url": "https://abujacitywalk.com/blog/",
+      "type": "index",
+      "linkText": "Read More",
+      "maxAgeDays": 14,
+      "topics": [
+        "lifestyle",
+        "innovation"
+      ]
+    }
+  ],
+  "editorial": {
+    "styles": {
+      "launch": [
+        "model_launch",
+        "product_launch",
+        "startup_feature",
+        "skills_guide"
+      ],
+      "landscape": [
+        "ecosystem"
+      ],
+      "research": [
+        "research"
+      ],
+      "news": [
+        "funding",
+        "local_news"
+      ]
+    },
+    "headline": "Active verb, the company or product name, a number only if it is sourced. No clickbait, no hype words."
+  }
+}

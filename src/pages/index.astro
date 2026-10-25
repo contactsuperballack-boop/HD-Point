@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import Newsletter from '../components/Newsletter.astro';
+import { visiblePosts } from '../data/posts';
+import cfg from '../../config.json';
+const posts = await visiblePosts();
+---
+<Base>
+  <div class="intro">
+    <p>{cfg.tagline}</p>
+    {posts.length > 3 && <input class="search" id="q" type="search" placeholder="Search posts" aria-label="Search posts" />}
+  </div>
+  {posts.length === 0 && <p class="empty">No posts yet. New posts appear here once they pass review.</p>}
+  <PostList posts={posts} lead />
+  <Newsletter place="home" />
+  <script is:inline>
+    (function () {
+      var q = document.getElementById('q'); if (!q) return;
+      var items = [].slice.call(document.querySelectorAll('#posts .card')), none = document.getElementById('nomatch');
+      var tracked = false;
+      q.addEventListener('input', function () {
+        if (!tracked && window.track) { window.track('Search'); tracked = true; }
+        var v = q.value.trim().toLowerCase(), n = 0;
+        items.forEach(function (li) { var ok = !v || li.dataset.text.indexOf(v) > -1; li.hidden = !ok; if (ok) n++; });
+        none.hidden = n > 0 || !v;
+      });
+    })();
+  </script>
+</Base>

@@ -1,0 +1,84 @@
+{
+  "factSheet": {
+    "title": "Abuja's Veltrum Technologies lists three products, from an AI workspace to electricity purchases",
+    "storyType": "startup_feature",
+    "region": "Nigeria",
+    "topics": [
+      "ai",
+      "innovation"
+    ],
+    "embedUrl": null,
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Veltrum Technologies says it builds secure software, AI systems and digital infrastructure for organisations across Africa.",
+        "sourceUrl": "https://veltrumtech.com",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c2",
+        "text": "The company is based in Abuja, Nigeria, and says it works across Africa.",
+        "sourceUrl": "https://veltrumtech.com",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c3",
+        "text": "Its website lists three products: Afro AI, Accessum and GetElectric.",
+        "sourceUrl": "https://veltrumtech.com",
+        "basis": "company-stated",
+        "value": 3,
+        "unit": "products",
+        "label": "Products listed"
+      },
+      {
+        "id": "c4",
+        "text": "Afro AI is described as a document-grounded workspace for conversation, learning and organisational knowledge.",
+        "sourceUrl": "https://veltrumtech.com",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c5",
+        "text": "Accessum is described as guest and security management designed for the operating realities of gated communities.",
+        "sourceUrl": "https://veltrumtech.com",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c6",
+        "text": "GetElectric is described as a direct electricity purchase experience shaped for quick, essential everyday transactions.",
+        "sourceUrl": "https://veltrumtech.com",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c7",
+        "text": "Veltrum says its approach is to define constraints, ownership and failure modes before implementation begins.",
+        "sourceUrl": "https://veltrumtech.com",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c8",
+        "text": "The site names seven team members, five of them as co-founders.",
+        "sourceUrl": "https://veltrumtech.com",
+        "basis": "company-stated"
+      }
+    ],
+    "flashcards": [
+      {
+        "q": "Where is Veltrum Technologies based?",
+        "a": "Abuja, Nigeria.",
+        "claimId": "c2"
+      },
+      {
+        "q": "What is Afro AI described as?",
+        "a": "A document-grounded workspace for conversation, learning and organisational knowledge.",
+        "claimId": "c4"
+      },
+      {
+        "q": "What does Accessum manage?",
+        "a": "Guest and security management for gated communities.",
+        "claimId": "c5"
+      }
+    ]
+  },
+  "article": "> **Key takeaways**\n>\n> - Veltrum Technologies says it builds secure software, AI systems and digital infrastructure for organisations across Africa. [c1]\n> - The company is based in Abuja, Nigeria. [c2]\n> - Its website lists three products: Afro AI, Accessum and GetElectric. [c3]\n> - Veltrum says it defines constraints, ownership and failure modes before implementation begins. [c7]\n\n## What it does\n\n### Afro AI\n\nAfro AI is described as a document-grounded workspace for conversation, learning and organisational knowledge. [c4]\n\n### Accessum\n\nAccessum is described as guest and security management designed for gated communities. [c5]\n\n### GetElectric\n\nGetElectric is described as a direct electricity purchase experience for quick, everyday transactions. [c6]\n\n## Who is behind it\n\nThe site names seven team members, five of them as co-founders. [c8]",
+  "dek": "Veltrum Technologies, based in Abuja, lists three products: an AI workspace, gated-community security and electricity purchases."
+}

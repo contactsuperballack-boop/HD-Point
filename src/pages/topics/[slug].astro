@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostList from '../../components/PostList.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { visiblePosts } from '../../data/posts';
+import { TOPICS } from '../../data/topics';
+
+export async function getStaticPaths() {
+  const posts = await visiblePosts();
+  return TOPICS.filter((t) => posts.some((p) => t.match(p.data))).map((t) => ({ params: { slug: t.slug } }));
+}
+const topic = TOPICS.find((t) => t.slug === Astro.params.slug);
+const posts = (await visiblePosts()).filter((p) => topic.match(p.data));
+---
+<Base title={topic.label} description={topic.blurb}>
+  <h1 class="pagetitle">{topic.label}</h1>
+  <p class="lead">{topic.blurb}</p>
+  <PostList posts={posts} />
+  <Newsletter place="topic" />
+</Base>

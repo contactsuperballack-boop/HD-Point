@@ -1,0 +1,13 @@
+---
+// Solid square = verified claim. Hollow square = company says. Text is always shown, not just shapes.
+const { verified = 0, stated = 0, legend = false } = Astro.props;
+const label = [verified ? `${verified} verified` : '', stated ? `${stated} company says` : ''].filter(Boolean).join(', ');
+---
+<span class="sourcing">
+  <span class="meter" aria-hidden="true">
+    {Array.from({ length: verified }).map(() => <i class="v"></i>)}
+    {Array.from({ length: stated }).map(() => <i class="s"></i>)}
+  </span>
+  <span>{label}</span>
+</span>
+{legend && <p class="legend">Solid squares are verified claims. Hollow squares are what the company says. <a href="/how-we-verify/">How we verify</a></p>}

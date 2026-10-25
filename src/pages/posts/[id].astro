@@ -1,0 +1,54 @@
+---
+import fs from 'node:fs';
+import cfg from '../../../config.json';
+import corrections from '../../data/corrections.json';
+import Newsletter from '../../components/Newsletter.astro';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import SourcingMeter from '../../components/SourcingMeter.astro';
+import { visiblePosts } from '../../data/posts';
+import { fmtDate, TYPE_LABEL } from '../../data/format';
+
+export async function getStaticPaths() {
+  const posts = await visiblePosts();
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const d = post.data;
+// Social previews need a PNG; export.py creates it. Only reference it if it exists.
+const ogImage = fs.existsSync(`public/assets/${post.id}/hero.png`) ? `/assets/${post.id}/hero.png` : undefined;
+const fixes = (corrections as any[]).filter((c) => c.slug === post.id).sort((a, b) => b.date.localeCompare(a.date));
+const jsonLd = {
+  '@context': 'https://schema.org', '@type': 'NewsArticle', headline: d.title, description: d.summary, datePublished: d.date.toISOString(),
+  publisher: { '@type': 'Organization', name: cfg.siteName, ...(Astro.site ? { logo: { '@type': 'ImageObject', url: new URL('/brand/logo.png', Astro.site).href } } : {}) },
+  ...(ogImage && Astro.site ? { image: [new URL(ogImage, Astro.site).href] } : {}),
+  ...(Astro.site ? { mainEntityOfPage: new URL(`/posts/${post.id}/`, Astro.site).href } : {}),
+};
+---
+<Base title={d.title} description={d.summary} image={ogImage} type="article" jsonLd={jsonLd}>
+  <article class="narrow">
+    <p class="meta">
+      {TYPE_LABEL[d.type] ?? d.type}, {d.region || 'Africa'}, {fmtDate(d.date)}, {d.read} min read
+      {d.sponsored && <span class="chip">Sponsored</span>}
+      {d.draft && <span class="chip draft">Draft, not public</span>}
+    </p>
+    {fixes.map((c) => <div class="notice correction"><strong>Correction, {fmtDate(new Date(c.date))}:</strong> {c.summary}</div>)}
+    <h1>{d.title}</h1>
+    <p class="dek">{d.summary}</p>
+    <SourcingMeter verified={d.verified} stated={d.stated} legend />
+    <div class="prose"><Content /></div>
+    <p><button type="button" class="share" data-title={d.title}>Share this post</button></p>
+    </article>
+  <Newsletter place="post" />
+  <script is:inline>
+    document.querySelectorAll('.share').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var u = location.href, t = b.dataset.title;
+        if (window.track) window.track('Share');
+        if (navigator.share) { navigator.share({ title: t, url: u }).catch(function () {}); }
+        else if (navigator.clipboard) { navigator.clipboard.writeText(u).then(function () { b.textContent = 'Link copied'; }); }
+      });
+    });
+  </script>
+</Base>

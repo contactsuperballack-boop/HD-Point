@@ -1,0 +1,16 @@
+{
+  "id": "1760000000000-ab12cd34",
+  "receivedAt": "2026-10-20T10:00:00.000Z",
+  "headline": "Example Health AI Launches Triage Assistant for Clinics in Ghana",
+  "storyType": "product_launch",
+  "company": "Example Health AI",
+  "website": "https://example.com",
+  "country": "Ghana",
+  "city": "Accra",
+  "embedUrl": "https://www.youtube.com/watch?v=example",
+  "claims": [
+    { "text": "The assistant helps nurses sort patients by urgency in English and Twi.", "sourceUrl": "https://example.com/product", "value": "", "unit": "", "label": "" },
+    { "text": "A pilot ran in 8 clinics.", "sourceUrl": "https://example.com/pilot", "value": "8", "unit": "clinics", "label": "Pilot clinics" },
+    { "text": "The pilot covered 3200 patient visits.", "sourceUrl": "https://example.com/pilot", "value": "3200", "unit": "visits", "label": "Patient visits" }
+  ]
+}

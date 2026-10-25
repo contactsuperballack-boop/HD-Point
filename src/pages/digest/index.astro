@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { allDigests } from '../../data/digests';
+import { fmtDate } from '../../data/format';
+const digests = allDigests();
+---
+<Base title="Weekly digest" description="Our weekly email digest: the week's posts and how well each one is sourced.">
+  <div class="narrow">
+    <h1 class="pagetitle">Weekly digest</h1>
+    <p class="lead">One email a week with our latest posts and how well each one is sourced. Past issues are here.</p>
+    <Newsletter place="digest" />
+    {digests.length === 0 && <p class="empty">No issues yet.</p>}
+    <ul class="eventlist">
+      {digests.map((d) => (
+        <li class="event">
+          <time datetime={d.date}>{fmtDate(new Date(d.date))}</time>
+          <div>
+            <h2><a href={`/digest/${d.id}/`}>{d.title}</a>{d.draft && <span class="chip draft">Draft</span>}</h2>
+            <p>{d.summary}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>

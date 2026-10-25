@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import cfg from '../../config.json';
+import corrections from '../data/corrections.json';
+import { visiblePosts } from '../data/posts';
+import { fmtDate } from '../data/format';
+
+// Add entries with:  node engine/correct.js <post-slug> "What was wrong and what is now correct"
+const posts = await visiblePosts();
+const title = (slug: string) => posts.find((p) => p.id === slug)?.data.title;
+const list = [...(corrections as any[])].sort((a, b) => b.date.localeCompare(a.date));
+---
+<Base title="Corrections" description="Every correction we have made to a published post.">
+  <div class="narrow">
+    <h1 class="pagetitle">Corrections</h1>
+    <p class="lead">When we get something wrong, we fix the post, note the correction at the top of it, and list it here.</p>
+    {list.length === 0 && <p class="empty">No corrections yet.</p>}
+    <ul class="eventlist">
+      {list.map((c) => (
+        <li class="event">
+          <time datetime={c.date}>{fmtDate(new Date(c.date))}</time>
+          <div>
+            {title(c.slug) ? <h2><a href={`/posts/${c.slug}/`}>{title(c.slug)}</a></h2> : <h2>{c.slug}</h2>}
+            <p>{c.summary}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+    {cfg.contactEmail && <p>Spotted an error? <a href={`mailto:${cfg.contactEmail}`}>Email us</a>.</p>}
+  </div>
+</Base>

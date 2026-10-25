@@ -1,0 +1,18 @@
+{
+  "factSheet": {
+    "title": "Example Agri AI Raises Seed Round for Swahili Crop Advice",
+    "storyType": "funding",
+    "region": "Kenya",
+    "publishedAt": "2026-10-18T08:00:00Z",
+    "embedUrl": null,
+    "claims": [
+      {"id":"c1","text":"The company says Example Agri AI, based in Nairobi, raised 2.4 million dollars in seed funding.","value":2.4,"unit":"million dollars","label":"Seed round","sourceUrl":"https://example.com/funding-press","basis":"company-stated"},
+      {"id":"c2","text":"A public filing lists Example Ventures as the lead investor.","sourceUrl":"https://example.org/filing","basis":"verified"},
+      {"id":"c3","text":"The company says 150 farmer cooperatives are using the service.","value":150,"unit":"cooperatives","label":"Cooperatives onboarded","sourceUrl":"https://example.com/funding-press","basis":"company-stated"},
+      {"id":"c4","text":"The company says it plans to enter 3 more countries next year.","value":3,"unit":"countries","label":"Planned new markets","sourceUrl":"https://example.com/funding-press","basis":"company-stated"},
+      {"id":"c5","text":"The assistant gives crop advice in Swahili and Kikuyu.","sourceUrl":"https://example.com/docs","basis":"verified"},
+      {"id":"c6","text":"The company is registered in Kenya according to the business registry.","sourceUrl":"https://example.org/registry","basis":"verified"}
+    ],
+    "flashcards": []
+  }
+}

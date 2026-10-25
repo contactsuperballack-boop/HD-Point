@@ -1,0 +1,93 @@
+{
+  "factSheet": {
+    "title": "BassiTech, an Abuja consultancy, points to a 12-week AI skills programme for 100 young people",
+    "storyType": "startup_feature",
+    "region": "Nigeria",
+    "topics": [
+      "ai",
+      "innovation"
+    ],
+    "embedUrl": null,
+    "claims": [
+      {
+        "id": "c1",
+        "text": "BassiTech Solutions describes itself as an Abuja-based technology consulting company offering strategy, software, proposals and digital skills.",
+        "sourceUrl": "https://bassi-tech.vercel.app/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c2",
+        "text": "The company says it serves businesses and organisations in fintech, telecoms, agriculture and media.",
+        "sourceUrl": "https://bassi-tech.vercel.app/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c3",
+        "text": "BassiTech says its Digital Wings Initiative is an AI-focused digital skills programme in Taraba State.",
+        "sourceUrl": "https://bassi-tech.vercel.app/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c4",
+        "text": "The programme is designed for 100 young people.",
+        "sourceUrl": "https://bassi-tech.vercel.app/",
+        "basis": "company-stated",
+        "value": 100,
+        "unit": "young people",
+        "label": "Programme participants"
+      },
+      {
+        "id": "c5",
+        "text": "The programme runs for 12 weeks.",
+        "sourceUrl": "https://bassi-tech.vercel.app/",
+        "basis": "company-stated",
+        "value": 12,
+        "unit": "weeks",
+        "label": "Programme length"
+      },
+      {
+        "id": "c6",
+        "text": "The company says it has designed 2 farming programmes for Kudan LGA.",
+        "sourceUrl": "https://bassi-tech.vercel.app/",
+        "basis": "company-stated",
+        "value": 2,
+        "unit": "farming programmes",
+        "label": "Programmes for Kudan LGA"
+      },
+      {
+        "id": "c7",
+        "text": "The site lists 5 projects and ventures in its case studies.",
+        "sourceUrl": "https://bassi-tech.vercel.app/",
+        "basis": "company-stated",
+        "value": 5,
+        "unit": "projects",
+        "label": "Projects featured"
+      },
+      {
+        "id": "c8",
+        "text": "BassiTech says it is led by founder Anas Abubakar Bassi, a Computer Engineer who studied at Ahmadu Bello University, Zaria.",
+        "sourceUrl": "https://bassi-tech.vercel.app/",
+        "basis": "company-stated"
+      }
+    ],
+    "flashcards": [
+      {
+        "q": "Where is BassiTech based?",
+        "a": "Abuja.",
+        "claimId": "c1"
+      },
+      {
+        "q": "How long is the Digital Wings Initiative?",
+        "a": "12 weeks.",
+        "claimId": "c5"
+      },
+      {
+        "q": "Which sectors does BassiTech say it serves?",
+        "a": "Fintech, telecoms, agriculture and media.",
+        "claimId": "c2"
+      }
+    ]
+  },
+  "article": "> **Key takeaways**\n>\n> - BassiTech Solutions describes itself as an Abuja-based technology consulting company offering strategy, software, proposals and digital skills. [c1]\n> - It says its Digital Wings Initiative is an AI-focused digital skills programme in Taraba State. [c3]\n> - The programme is designed for 100 young people. [c4]\n> - It runs for 12 weeks. [c5]\n\n## What it does\n\nThe company says it serves businesses and organisations in fintech, telecoms, agriculture and media. [c2]\n\n### Digital Wings Initiative\n\nBassiTech says the initiative is an AI-focused digital skills programme in Taraba State. [c3] It is designed for 100 young people [c4] and runs for 12 weeks. [c5]\n\n### Other work\n\nThe company says it has designed 2 farming programmes for Kudan LGA, [c6] and its site lists 5 projects and ventures in total. [c7]\n\n## Who is behind it\n\nBassiTech says it is led by founder Anas Abubakar Bassi, a Computer Engineer who studied at Ahmadu Bello University, Zaria. [c8]",
+  "dek": "BassiTech, an Abuja consultancy, says its Digital Wings programme is designed for 100 young people over 12 weeks."
+}

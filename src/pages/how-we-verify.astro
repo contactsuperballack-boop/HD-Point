@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import SourcingMeter from '../components/SourcingMeter.astro';
+import cfg from '../../config.json';
+import { TYPE_LABEL } from '../data/format';
+---
+<Base title="How we verify" description="How every claim on this site is sourced, labelled and checked before a post is published.">
+  <div class="narrow">
+  <h1 class="pagetitle">How we verify</h1>
+  <p class="lead">Every claim on this site links to a source, and every post shows how well its claims are sourced.</p>
+
+  <article class="prose pageprose">
+    <h2>Two labels</h2>
+    <p>Each post has a row of squares, one per claim.</p>
+    <SourcingMeter verified={3} stated={2} legend />
+    <ul>
+      <li><strong>Verified:</strong> an independent source supports the claim, and we link to it.</li>
+      <li><strong>Company says:</strong> the claim comes from the company itself and we have not independently checked it. We write these as the company's statement.</li>
+    </ul>
+    <p>Verified does not mean we tested the product or endorse it. It means the claim is backed by a source other than the company.</p>
+
+    <h2>What we check before a post goes out</h2>
+    <ul>
+      <li>Every fact is a single claim with a source link.</li>
+      <li>Every number in the text must appear in the claims. A figure that is not in the claims blocks the post.</li>
+      <li>Every paragraph must cite at least one claim.</li>
+      <li>News posts need at least {cfg.minSourcesNews} different sources. Featured submissions need at least {cfg.minSourcesPromo}.</li>
+      <li>We only pick up news published in the last {cfg.maxStoryAgeDays} days.</li>
+      <li>Posts that fail any check are held for a person to review instead of being published.</li>
+    </ul>
+
+    <h2>Who reviews</h2>
+    {cfg.autoPublish && (cfg.autoPublishTypes ?? []).length > 0
+      ? <p>Some low-risk post types ({(cfg.autoPublishTypes ?? []).map((t) => TYPE_LABEL[t] ?? t).join(', ')}) can publish automatically, but only after a track record of human review with very few corrections, and only after passing every check above. Everything else, and every featured submission, is read by a person first.</p>
+      : <p>A person reads every post before it goes live.</p>}
+
+    <h2>Charts, infographics, decks and reports</h2>
+    <p>These are built from the same list of claims as the article, so they cannot show a number the article does not support. Each one marks claims as Verified or Company says in the same way.</p>
+
+    <h2>AI assistance</h2>
+    <p>We use AI to help draft posts and build these formats. AI can make mistakes, which is why the checks above exist and why every claim links to its source, so you can check it yourself.</p>
+
+    <h2>Corrections</h2>
+    <p>If you spot an error, <a href="/about/">tell us</a>. We correct the post, note the correction at the top of it, and list it on the <a href="/corrections/">corrections page</a>.</p>
+  </article>
+  </div>
+</Base>

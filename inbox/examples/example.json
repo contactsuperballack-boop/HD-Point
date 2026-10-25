@@ -1,0 +1,20 @@
+{
+  "factSheet": {
+    "title": "Example AI Startup Launches Yoruba Voice Assistant in Lagos",
+    "storyType": "startup_feature",
+    "region": "Nigeria",
+    "publishedAt": "2026-10-19T09:00:00Z",
+    "embedUrl": "https://example.com/official-launch-video",
+    "claims": [
+      {"id":"c1","text":"The company says Example AI, a Lagos-based startup, has launched a Yoruba voice assistant for customer support.","sourceUrl":"https://example.com/press","basis":"company-stated"},
+      {"id":"c2","text":"The company says the assistant handled 12000 calls in a pilot.","value":12000,"unit":"calls","label":"Pilot calls","sourceUrl":"https://example.com/press","basis":"company-stated"},
+      {"id":"c3","text":"The company says a second pilot handled 4500 calls.","value":4500,"unit":"calls","label":"Second pilot calls","sourceUrl":"https://example.com/press","basis":"company-stated"},
+      {"id":"c4","text":"The product docs list Yoruba and Nigerian Pidgin as supported at launch.","sourceUrl":"https://example.com/docs","basis":"verified"}
+    ],
+    "flashcards": [
+      {"q":"Which languages are supported at launch?","a":"Yoruba and Nigerian Pidgin.","claimId":"c4"},
+      {"q":"Where is the startup based?","a":"Lagos.","claimId":"c1"},
+      {"q":"How many calls did the first pilot handle (company-stated)?","a":"12000.","claimId":"c2"}
+    ]
+  }
+}

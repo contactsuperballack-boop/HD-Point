@@ -1,0 +1,34 @@
+name: Weekly digest draft
+on:
+  schedule:
+    - cron: '0 8 * * 5'   # Fridays 08:00 UTC = 09:00 Lagos
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: digest
+  cancel-in-progress: false
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the digest draft
+        run: node engine/digest.js
+      - name: Commit and open a review issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "blog-bot"
+          git config user.email "blog-bot@users.noreply.github.com"
+          git add -A src/data/digests
+          if git diff --cached --quiet; then echo "No new digest."; exit 0; fi
+          git commit -m "Add weekly digest draft"
+          git push
+          F=$(git show --name-only --pretty= HEAD | grep '^src/data/digests/' | head -1)
+          printf "A weekly digest draft is ready: \`$F\`.\n\nRead it, then set \`\"draft\": false\` and push. The site will publish it at /digest/ and in /digest.xml, and your email provider can send it from that feed.\n" > body.md
+          gh issue create --title "Weekly digest ready for review ($(date -u +%F))" --body-file body.md

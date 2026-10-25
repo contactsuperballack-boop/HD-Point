@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import cfg from '../../config.json';
+---
+<Base title="About" description={`About ${cfg.siteName}: AI products, model launches, skills and AI-native startups across Nigeria and Africa.`}>
+  <div class="narrow">
+  <h1 class="pagetitle">About {cfg.siteName}</h1>
+  <p class="lead">{cfg.siteName} covers AI, innovation, leisure and lifestyle, with a focus on Nigeria and the rest of Africa. Every claim in a post links to its source, and we show how well each claim is sourced.</p>
+
+  <article class="prose pageprose">
+    <h2>What we publish</h2>
+    <ul>
+      <li>AI: new models, products and tools.</li>
+      <li>Innovation: startups and smart solutions, and the funding behind them.</li>
+      <li>Leisure and lifestyle: places, culture and the way we live.</li>
+      <li>Skills and training for working with AI.</li>
+      <li>Featured posts: stories submitted by companies. Each one is labelled.</li>
+    </ul>
+
+    <h2>How posts are made</h2>
+    <p>Every post starts as a list of claims, and each claim links to a source. We use AI to help draft the post and to build the charts, infographics, slide decks and reports from that same list. Nothing in those formats comes from anywhere else. <a href="/how-we-verify/">How we verify</a> explains the checks in full.</p>
+
+    <h2>Featured submissions</h2>
+    <p>Startups can send us details on the <a href="/submit/">submission page</a>. We read every submission, and we do not publish everything we receive. A featured post is labelled as such. Unless an independent source backs a claim, it is shown as what the company says.</p>
+
+    <h2>Corrections and contact</h2>
+    <p>If you find a mistake, tell us and we will check it. When we correct a post, we note the correction at the top of it.</p>
+    {cfg.contactEmail && <p>Email: <a href={`mailto:${cfg.contactEmail}`}>{cfg.contactEmail}</a></p>}
+  </article>
+  </div>
+</Base>
