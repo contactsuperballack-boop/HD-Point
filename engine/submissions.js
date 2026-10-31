@@ -39,6 +39,6 @@ export function submissionToFactSheet(s) {
 
   return {
     errors,
-    factSheet: { title, storyType: s.storyType, region: country, publishedAt: s.receivedAt || new Date().toISOString(), embedUrl: embedUrl(s.embedUrl), claims, flashcards: [], topics: TOPIC_TAGS.includes(s.topic) ? [s.topic] : [], sponsored: true }
+    factSheet: { title, storyType: s.storyType, region: country, publishedAt: s.receivedAt || new Date().toISOString(), embedUrl: embedUrl(s.embedUrl), claims, flashcards: [], topic: TOPIC_TAGS.includes(s.topic) ? s.topic : 'startups', sponsored: true }
   };
 }

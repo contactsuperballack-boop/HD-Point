@@ -3,23 +3,23 @@ title: "Ignite sets out six on-demand AI services, delivered remotely from Afric
 summary: "Ignite says it offers six on-demand services, from products and data to evaluation, delivered remotely from Africa."
 description: "Ignite says it offers six on-demand services, from products and data to evaluation, delivered remotely from Africa."
 style: launch
-sectors: []
-date: 2026-10-24T07:15:48.288Z
+date: 2026-10-30T19:41:48.070Z
 type: startup_feature
 region: "Africa"
 sponsored: false
 draft: true
 verified: 0
 stated: 6
-topics: [ai, innovation]
+topic: startups
+home: false
 assets: [hero, infographic, deck, flashcards]
 read: 1
-image: "/assets/ignite-sets-out-six-on-demand-ai-services-delivered-remotely-from-afri/hero.svg"
+image: "/assets/ignite-sets-out-six-on-demand-ai-services-delivered-remotely-from-afri/thumb.svg"
 ---
 
 > **From the company's own materials.** Claims marked "the company says" come from the company's website and were not independently verified.
 
-![Ignite sets out six on-demand AI services, delivered remotely from Africa](/assets/ignite-sets-out-six-on-demand-ai-services-delivered-remotely-from-afri/hero.svg)
+![Key figure: 6 services, Services offered](/assets/ignite-sets-out-six-on-demand-ai-services-delivered-remotely-from-afri/thumb.svg)
 
 > **Key takeaways**
 >

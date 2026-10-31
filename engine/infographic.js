@@ -10,7 +10,7 @@ const wrap = (t, n, max = 99) => {
   if (lines.length > max) { lines.length = max; lines[max - 1] = lines[max - 1].replace(/\s*\S*$/, '') + '…'; }
   return lines;
 };
-const INK = '#14213D', INDIGO = '#1B2A6B', OCHRE = '#F2B134', STATED = '#8A5A00', MUTED = '#505A7A', RULE = '#C9CDE0';
+const INK = '#E8ECF4', INDIGO = '#DDE3EF', OCHRE = '#A5AEC0', STATED = '#C7CFDD', MUTED = '#A5AEC0', RULE = '#2A3243', HDR = '#1B2230', BG = '#0D1017';
 
 // 1080-wide portrait infographic, built only from the fact sheet. Height grows with content.
 export function infographic(f) {
@@ -27,7 +27,7 @@ export function infographic(f) {
   y += 52 + (tl.length - 1) * 62 + 30;
   if (f.sponsored) { out.push(`<rect x="${M}" y="${y}" width="310" height="42" fill="none" stroke="${OCHRE}" stroke-width="3"/><text x="${M + 16}" y="${y + 29}" font-size="22" font-weight="700" fill="#fff">Sponsored / featured</text>`); y += 42 + 24; }
   const hdr = y + 20;
-  out.unshift(`<rect width="${W}" height="${hdr}" fill="${INDIGO}"/>`);
+  out.unshift(`<rect width="${W}" height="${hdr}" fill="${HDR}"/>`);
   y = hdr + 70;
 
   // key figure
@@ -73,5 +73,5 @@ export function infographic(f) {
   y += 44;
   out.push(`<text x="${M}" y="${y}" font-size="20" fill="${MUTED}">AI-assisted. Every claim is linked to a source in the full post.</text>`);
   y += 40;
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${y}" role="img" aria-label="${esc('Infographic: ' + f.title)}" font-family="'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',Arial,sans-serif"><rect width="${W}" height="${y}" fill="#F7F8FA"/>${out.join('')}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${y}" role="img" aria-label="${esc('Infographic: ' + f.title)}" font-family="'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',Arial,sans-serif"><rect width="${W}" height="${y}" fill="${BG}"/>${out.join('')}</svg>`;
 }

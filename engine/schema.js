@@ -1,6 +1,6 @@
-export const TOPIC_TAGS = ['ai', 'innovation', 'leisure', 'lifestyle'];
+export const TOPIC_TAGS = ['ai', 'innovation', 'climate', 'lifestyle', 'startups'];   // each article has exactly one
 export const STORY_TYPES = ['model_launch','product_launch','startup_feature','funding','skills_guide','local_news','research','ecosystem'];
-export const SECTOR_TAGS = ['voice-language', 'agri-climate', 'credit-fintech', 'health', 'infrastructure', 'policy-data', 'skills', 'funding'];
+export const SECTOR_TAGS = ['voice-language', 'food-systems', 'credit-fintech', 'health', 'infrastructure', 'policy-data', 'skills', 'funding'];
 
 // Fact sheet = single source of truth. Every asset and the article come ONLY from this.
 // { title, storyType, region, sponsored, publishedAt, embedUrl,

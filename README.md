@@ -136,7 +136,25 @@ Currently watched: Ignite, Veltrum Technologies, BassiTech Solutions, Smartel Ag
 
 # Update: writing styles, sectors and the editorial plan
 - `engine/styles.js` holds four layouts (launch, landscape, research, news) chosen by story type, plus the evidence rules the model must follow. The draft step returns a standfirst (sub-headline) and a body; the standfirst becomes the page description (150 characters or fewer).
-- New story type `ecosystem` for market and landscape pieces. New `sectors` tags (voice-language, agri-climate, credit-fintech, health, infrastructure, policy-data, skills, funding) drive the Sectors menu.
+- New story type `ecosystem` for market and landscape pieces. New `sectors` tags (voice-language, food-systems, credit-fintech, health, infrastructure, policy-data, skills, funding) drive the Sectors menu.
 - QA now checks every bullet and table row for a citation, checks numbers in the title, standfirst, body and tables, and adds reviewer warnings (long sections, long standfirst, no standfirst). Warnings appear in `review-queue.json`.
 - Tables and takeaway boxes are styled. `docs/editorial-plan.md` has the topic map, headline rules and patterns, a weekly rhythm, and notes on which facts in the sample article could and could not be confirmed.
 - The first sample post (`samples/0-africa-landscape.json`) is a sourced rewrite of the sample article. The other five samples are rewritten in the new layouts.
+
+## Climate and food systems
+The Topics menu has a Climate page. It lists posts tagged `climate` and every post in the Food systems sector (farming, food security, supply chains). New tags: topic `climate`, sector `food-systems` (replaces the old agri-climate tag). The submission form has a Climate option.
+
+# Update: HD Point look, homepage and the first five articles
+- **Design:** dark slate with brushed-steel type and one chrome point, following the supplied mood images and video. Barlow Condensed for headings and navigation, Inter for text. Light mode follows the reader's system setting. Tokens are at the top of `src/styles/global.css`. Hero text is set in `config.json > hero` and `tagline`.
+- **Media:** `public/brand/mood.webp` and `mood.jpg` (hero and video poster), `hd-point-intro.mp4` (plays only when the reader presses "Watch the intro", never automatically), and `og-default.png` (link-preview card, cropped from the mood image by `brand/build_logo.py`).
+- **Logo:** same monogram, now graphite and silver, with the dot drawn as a chrome sphere.
+- **Homepage:** a hero, topic pills, then Latest: the lead story plus the next posts. A post with `home: false` in its front matter stays off Latest and appears only on its topic pages. Ignite, Veltrum, BassiTech, Smartel and Abuja City Walk are set this way.
+- **Topics:** Startups is now a tag (`startups`), not a story type. Ignite and Veltrum are tagged Startups; BassiTech and Smartel are tagged Innovation (Smartel also appears under Climate through the Food systems sector).
+- **The five Latest posts** (`samples/0*.json`): the landscape piece and four new articles in the same format: Dubai's Create AI Agents Championship, Nigeria's N-ATLAS language model, Nigeria's National AI Strategy, and AI on African farms. Every claim has a source link; claims made by the organiser or company are marked as such. Replace or delete the samples before your first real run.
+
+# Update: one article, one page; Tailwind layout
+- **Topics:** exactly five (AI, Innovation, Climate, Lifestyle, Startups). Every article has one `topic` in its front matter. Sector, landscape, model, product and featured listing pages are gone, so nothing is listed twice.
+- **Where an article appears:** Latest shows posts that are not marked `home: false`. A topic page shows that topic's posts that are `home: false`. A topic page tells the reader when more stories on that topic are featured in Latest.
+- **Cards:** each post gets a calm thumbnail (`thumb.svg`: one key figure or the topic, plus the brand) instead of repeating the headline. The headline version (`hero.svg` / `hero.png`) is used only as the link-preview image.
+- **Tailwind CSS v4:** the layout (header, hero, cards, grids, footer, topic pages) is written with Tailwind utility classes. `src/styles/global.css` imports Tailwind's theme and utilities (not its base reset), maps our colour tokens to utilities (`bg-surface`, `text-muted`, `border-rule`, `font-head`) and keeps a small component layer for the dropdown menu, article text, forms and tables. Run `npm install` to fetch `tailwindcss` and `@tailwindcss/vite` (Node 20 or newer).
+- **New articles:** Cassava's AI Factory (AI), Google's flood forecasting in Nigeria (Climate), AI in Nollywood (Lifestyle) and Talent Nation's pre-seed round (Startups). They sit on their topic pages, not on Latest.

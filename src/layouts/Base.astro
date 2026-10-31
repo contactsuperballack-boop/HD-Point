@@ -1,22 +1,16 @@
 ---
 import '../styles/global.css';
 import cfg from '../../config.json';
-import { visiblePosts } from '../data/posts';
 import { allDigests } from '../data/digests';
 import { TOPICS } from '../data/topics';
 
 const { title, description = cfg.tagline, image, type = 'website', jsonLd } = Astro.props;
 const SITE = cfg.siteName; // set in config.json
-const posts = await visiblePosts();
-const has = (t) => posts.some((p) => t.match(p.data));
-const inGroup = (g) => TOPICS.filter((t) => t.group === g && has(t)).map((t) => ({ label: t.label, href: `/topics/${t.slug}/` }));
 const groups = [
-  { id: 'topics', label: 'Topics', items: inGroup('topics') },
-  { id: 'sectors', label: 'Sectors', items: inGroup('sectors') },
-  { id: 'news', label: 'News', items: [{ label: 'Latest', href: '/' }, ...inGroup('news')] },
+  { id: 'latest', label: 'Latest', href: '/' },
+  { id: 'topics', label: 'Topics', items: TOPICS.map((t) => ({ label: t.label, href: `/topics/${t.slug}/` })) },
   { id: 'events', label: 'Events', href: '/events/' },
   { id: 'more', label: 'More', right: true, items: [
-    ...inGroup('more'),
     ...(allDigests().length ? [{ label: 'Weekly digest', href: '/digest/' }] : []),
     { label: 'Data', href: '/data/' },
     { label: 'Corrections', href: '/corrections/' },
@@ -26,7 +20,7 @@ const groups = [
     { label: 'RSS feed', href: '/rss.xml' },
     ...(cfg.contactEmail ? [{ label: 'Contact', href: `mailto:${cfg.contactEmail}` }] : []),
   ] },
-].filter((g) => g.href || g.items.length);
+];
 const path = Astro.url.pathname;
 const here = (href) => (href === '/' ? path === '/' : href.startsWith('/') && !href.endsWith('.xml') && path.startsWith(href));
 const fullTitle = title ? `${title} | ${SITE}` : SITE;
@@ -55,22 +49,22 @@ const social = Object.entries(cfg.social?.profiles ?? {}).filter(([, u]) => u);
     <script is:inline>document.documentElement.classList.add("js")</script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
-    <meta name="theme-color" content="#1B2A6B" />
+    <meta name="theme-color" content="#0D1017" />
     <link rel="alternate" type="application/rss+xml" title={SITE} href="/rss.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     {analyticsSrc && <script defer src={analyticsSrc} data-domain={analyticsId} data-website-id={analyticsId}></script>}
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />}
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site">
-      <div class="wrap bar">
-        <a class="brand" href="/" aria-label={SITE}>
+      <div class="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-3">
+        <a class="inline-flex items-center no-underline" href="/" aria-label={SITE}>
           <picture>
-            <source srcset="/brand/logo-dark.svg" media="(prefers-color-scheme: dark)" />
-            <img src="/brand/logo.svg" alt={SITE} width="112" height="34" />
+            <source srcset="/brand/logo.svg" media="(prefers-color-scheme: light)" />
+            <img class="block h-8 w-auto" src="/brand/logo-dark.svg" alt={SITE} width="112" height="34" />
           </picture>
         </a>
         <button class="menubtn" type="button" aria-expanded="false" aria-controls="mainnav">Menu</button>
@@ -91,20 +85,39 @@ const social = Object.entries(cfg.social?.profiles ?? {}).filter(([, u]) => u);
         </nav>
       </div>
     </header>
-    <main class="wrap" id="main"><slot /></main>
-    <footer class="wrap foot">
-      <p>Posts are AI-assisted and linked to their sources. Sponsored posts are labelled.</p>
-      <p>
-        <a href="/about/">About</a>
-        <a href="/how-we-verify/">How we verify</a>
-        <a href="/corrections/">Corrections</a>
-        <a href="/events/">Events</a>
-        <a href="/submit/">Submit a startup</a>
-        <a href="/rss.xml">RSS</a>
-        <a href="/privacy/">Privacy</a>
-        {cfg.contactEmail && <a href={`mailto:${cfg.contactEmail}`}>Contact</a>}
-      </p>
-      {social.length > 0 && <p>Follow us: {social.map(([k, u]) => <a href={u} rel="noopener">{LABEL[k] ?? k}</a>)}</p>}
+    <main id="main" class="mx-auto w-full max-w-6xl px-5"><slot /></main>
+    <footer class="mx-auto mt-28 w-full max-w-6xl border-t border-rule px-5 pt-12 pb-16">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <p class="font-head text-2xl font-bold uppercase tracking-wide text-ink">{SITE}</p>
+          <p class="mt-3 max-w-xs text-sm text-muted">{cfg.tagline}</p>
+        </div>
+        <nav aria-label="Topics">
+          <p class="font-head text-sm font-semibold uppercase tracking-widest text-muted">Topics</p>
+          <ul class="mt-3 grid list-none gap-2">
+            {TOPICS.map((t) => <li><a class="font-head text-lg font-semibold uppercase tracking-wide text-ink no-underline hover:text-accent" href={`/topics/${t.slug}/`}>{t.label}</a></li>)}
+          </ul>
+        </nav>
+        <nav aria-label="More">
+          <p class="font-head text-sm font-semibold uppercase tracking-widest text-muted">More</p>
+          <ul class="mt-3 grid list-none gap-2">
+            <li><a class="font-head text-lg font-semibold uppercase tracking-wide text-ink no-underline hover:text-accent" href="/about/">About</a></li>
+            <li><a class="font-head text-lg font-semibold uppercase tracking-wide text-ink no-underline hover:text-accent" href="/how-we-verify/">How we verify</a></li>
+            <li><a class="font-head text-lg font-semibold uppercase tracking-wide text-ink no-underline hover:text-accent" href="/submit/">Submit a startup</a></li>
+            <li><a class="font-head text-lg font-semibold uppercase tracking-wide text-ink no-underline hover:text-accent" href="/events/">Events</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mt-10 flex flex-col gap-4 border-t border-rule pt-6 text-sm text-muted md:flex-row md:items-center md:justify-between">
+        <p>Posts are AI-assisted and linked to their sources. Sponsored posts are labelled.</p>
+        <ul class="flex list-none flex-wrap items-center gap-x-5 gap-y-2">
+          <li><a class="text-muted no-underline hover:text-ink" href="/corrections/">Corrections</a></li>
+          <li><a class="text-muted no-underline hover:text-ink" href="/privacy/">Privacy</a></li>
+          <li><a class="text-muted no-underline hover:text-ink" href="/rss.xml">RSS</a></li>
+          {cfg.contactEmail && <li><a class="text-muted no-underline hover:text-ink" href={`mailto:${cfg.contactEmail}`}>Contact</a></li>}
+          {social.map(([k, u]) => <li><a class="text-muted no-underline hover:text-ink" href={u} rel="noopener">{LABEL[k] ?? k}</a></li>)}
+        </ul>
+      </div>
     </footer>
     <script is:inline>
       (function () {

@@ -1,0 +1,80 @@
+{
+  "slug": "talent-nation-raises-pre-seed-round-to-train-one-million-african-ai-en",
+  "title": "Talent Nation raises pre-seed round to train one million African AI engineers",
+  "type": "funding",
+  "topic": "startups",
+  "region": "Nigeria",
+  "date": "2026-10-30T19:41:47.980Z",
+  "sponsored": false,
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Talent Nation, a startup founded by Nigerian serial entrepreneur Iyinoluwa Aboyeji and South African-born entrepreneur Kesiah Valkin, has raised an undisclosed pre-seed round.",
+      "sourceUrl": "https://techmoran.com/2026/10/28/talent-nation-raises-pre-seed-funding-to-train-1-million-african-ai-engineers/",
+      "basis": "verified"
+    },
+    {
+      "id": "c2",
+      "text": "It aims to train and deploy one million AI engineers from Africa into businesses worldwide over the next decade.",
+      "sourceUrl": "https://techmoran.com/2026/10/28/talent-nation-raises-pre-seed-funding-to-train-1-million-african-ai-engineers/",
+      "basis": "verified"
+    },
+    {
+      "id": "c3",
+      "text": "The round was co-led by Enza Capital and London-based LocalGlobe, with participation from Future Africa, Kaleo Ventures, Ajim Capital, Solving.org and Accelerate Africa.",
+      "sourceUrl": "https://techmoran.com/2026/10/28/talent-nation-raises-pre-seed-funding-to-train-1-million-african-ai-engineers/",
+      "basis": "verified"
+    },
+    {
+      "id": "c4",
+      "text": "Through its Learn2Earn academy, Talent Nation trains, certifies and deploys engineers into organisations that want to build and manage their own AI capabilities.",
+      "sourceUrl": "https://techmoran.com/2026/10/28/talent-nation-raises-pre-seed-funding-to-train-1-million-african-ai-engineers/",
+      "basis": "verified"
+    },
+    {
+      "id": "c5",
+      "text": "Aboyeji, the executive chairman, co-founded Andela and Flutterwave, according to Semafor.",
+      "sourceUrl": "https://www.semafor.com/article/10/28/2026/nigerian-serial-tech-founder-launches-ai-startup",
+      "basis": "verified"
+    },
+    {
+      "id": "c6",
+      "text": "The company has not disclosed the size of the round or a detailed timetable for reaching its target.",
+      "sourceUrl": "https://techmoran.com/2026/10/28/talent-nation-raises-pre-seed-funding-to-train-1-million-african-ai-engineers/",
+      "basis": "verified"
+    },
+    {
+      "id": "c7",
+      "text": "Aboyeji says Talent Nation wants to make certified AI engineering talent accessible to organisations at a fraction of the cost of hiring from frontier AI labs or traditional consulting firms.",
+      "sourceUrl": "https://techmoran.com/2026/10/28/talent-nation-raises-pre-seed-funding-to-train-1-million-african-ai-engineers/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c8",
+      "text": "Aboyeji told Semafor that Learn2Earn received 63,000 applications, and fewer than 3% were selected for training on multiple campuses.",
+      "value": 63000,
+      "unit": "applications",
+      "label": "Learn2Earn applications",
+      "sourceUrl": "https://www.semafor.com/article/10/28/2026/nigerian-serial-tech-founder-launches-ai-startup",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c9",
+      "text": "Aboyeji told Semafor that most developers from the training programmes will be African, though he does not want to constrain the company to that.",
+      "sourceUrl": "https://www.semafor.com/article/10/28/2026/nigerian-serial-tech-founder-launches-ai-startup",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c10",
+      "text": "The venture mirrors Andela, which Aboyeji launched in 2014 and which trained a generation of software engineers in six African countries, according to Semafor.",
+      "sourceUrl": "https://www.semafor.com/article/10/28/2026/nigerian-serial-tech-founder-launches-ai-startup",
+      "basis": "verified"
+    },
+    {
+      "id": "c11",
+      "text": "Companies are adopting AI quickly, but many struggle to find engineers who can build and maintain reliable systems around AI models, according to TechAwk NG.",
+      "sourceUrl": "https://www.techawkng.com/2026/10/28/talent-nation-raises-pre-seed-for-african-ai-engineers/",
+      "basis": "verified"
+    }
+  ]
+}

@@ -3,23 +3,23 @@ title: "Abuja's Veltrum Technologies lists three products, from an AI workspace 
 summary: "Veltrum Technologies, based in Abuja, lists three products: an AI workspace, gated-community security and electricity purchases."
 description: "Veltrum Technologies, based in Abuja, lists three products: an AI workspace, gated-community security and electricity purchases."
 style: launch
-sectors: []
-date: 2026-10-24T07:15:48.287Z
+date: 2026-10-30T19:41:48.060Z
 type: startup_feature
 region: "Nigeria"
 sponsored: false
 draft: true
 verified: 0
 stated: 8
-topics: [ai, innovation]
+topic: startups
+home: false
 assets: [hero, infographic, deck, flashcards]
 read: 1
-image: "/assets/abuja-s-veltrum-technologies-lists-three-products-from-an-ai-workspace/hero.svg"
+image: "/assets/abuja-s-veltrum-technologies-lists-three-products-from-an-ai-workspace/thumb.svg"
 ---
 
 > **From the company's own materials.** Claims marked "the company says" come from the company's website and were not independently verified.
 
-![Abuja's Veltrum Technologies lists three products, from an AI workspace to electricity purchases](/assets/abuja-s-veltrum-technologies-lists-three-products-from-an-ai-workspace/hero.svg)
+![Key figure: 3 products, Products listed](/assets/abuja-s-veltrum-technologies-lists-three-products-from-an-ai-workspace/thumb.svg)
 
 > **Key takeaways**
 >

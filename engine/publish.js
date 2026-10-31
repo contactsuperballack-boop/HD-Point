@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import { barChart, heroCard, flashcardsMd, embedMd } from './assets.js';
+import { barChart, heroCard, thumbCard, flashcardsMd, embedMd } from './assets.js';
 import { deckHtml } from './deck.js';
 import { infographic } from './infographic.js';
 import { reportHtml } from './report.js';
@@ -23,7 +23,12 @@ export function publish(f, article, assetList, qa, cfg) {
   const alt = ('Infographic summarising: ' + f.claims.slice(0, 3).map(c => c.text).join(' ')).replace(/[\[\]()]/g, '').replace(/\s+/g, ' ').slice(0, 300);
   if (f.selfReported) body += `> **From the company's own materials.** Claims marked "the company says" come from the company's website and were not independently verified.\n\n`;
   if (f.sponsored) body += `> **Sponsored / featured submission.** Claims marked "the company says" come from the company and were not independently verified.\n\n`;
-  if (assetList.includes('hero')) { fs.writeFileSync(`${dir}/hero.svg`, heroCard(f)); body += `![${f.title}](/assets/${slug}/hero.svg)\n\n`; }
+  if (assetList.includes('hero')) {
+    fs.writeFileSync(`${dir}/hero.svg`, heroCard(f));       // social preview card (has the headline); exported to hero.png
+    fs.writeFileSync(`${dir}/thumb.svg`, thumbCard(f));     // calm card image for the site
+    const topNum = f.claims.find(c => typeof c.value === 'number');
+    body += `![${topNum ? q(`Key figure: ${topNum.value.toLocaleString('en')} ${topNum.unit || ''}${topNum.label ? ', ' + topNum.label : ''}`) : ''}](/assets/${slug}/thumb.svg)\n\n`;
+  }
   body += article.replace(/\[(c\d+)\]/g, (_, id) => `[[${id}]](#src-${id})`) + '\n\n';
   if (assetList.includes('infographic')) {
     fs.writeFileSync(`${dir}/infographic.svg`, infographic(f));
@@ -43,15 +48,15 @@ export function publish(f, article, assetList, qa, cfg) {
   body += `## Sources\n` + f.claims.map(c => `- <span id="src-${c.id}">[${c.id}]</span> ${c.basis === 'verified' ? 'Verified' : 'Company-stated'}: ${c.sourceUrl}`).join('\n') + '\n\n*AI-assisted. Every claim above is linked to a source.*\n';
   const verified = f.claims.filter(c => c.basis === 'verified').length;
   const read = Math.max(1, Math.round(article.trim().split(/\s+/).length / 200));
-  const image = assetList.includes('hero') ? `image: "/assets/${slug}/hero.svg"\n` : '';
+  const image = assetList.includes('hero') ? `image: "/assets/${slug}/thumb.svg"\n` : '';
   const date = new Date().toISOString();
   const summary = f.dek || f.claims[0].text;
   const description = summary.length <= 155 ? summary : summary.slice(0, 154).replace(/\s+\S*$/, '') + '…';
-  const fm = `---\ntitle: "${q(f.title)}"\nsummary: "${q(summary)}"\ndescription: "${q(description)}"\nstyle: ${styleFor(f.storyType)}\nsectors: [${(f.sectors || []).join(', ')}]\ndate: ${date}\ntype: ${f.storyType}\nregion: "${q(f.region || '')}"\nsponsored: ${!!f.sponsored}\ndraft: ${!live}\nverified: ${verified}\nstated: ${f.claims.length - verified}\ntopics: [${(f.topics || []).join(', ')}]\nassets: [${assetList.join(', ')}]\nread: ${read}\n${image}${live ? 'autoPublished: true\n' : ''}---\n\n`;
+  const fm = `---\ntitle: "${q(f.title)}"\nsummary: "${q(summary)}"\ndescription: "${q(description)}"\nstyle: ${styleFor(f.storyType)}\ndate: ${date}\ntype: ${f.storyType}\nregion: "${q(f.region || '')}"\nsponsored: ${!!f.sponsored}\ndraft: ${!live}\nverified: ${verified}\nstated: ${f.claims.length - verified}\ntopic: ${f.topic || 'innovation'}\nhome: ${f.home === false ? 'false' : 'true'}\nassets: [${assetList.join(', ')}]\nread: ${read}\n${image}${live ? 'autoPublished: true\n' : ''}---\n\n`;
   fs.writeFileSync(`${POSTS_DIR}/${slug}.md`, fm + body);
   // Structured claims, one file per post: the source of the public dataset on /data/.
   fs.mkdirSync('src/data/claims', { recursive: true });
-  fs.writeFileSync(`src/data/claims/${slug}.json`, JSON.stringify({ slug, title: f.title, type: f.storyType, topics: f.topics || [], region: f.region || '', date, sponsored: !!f.sponsored, sectors: f.sectors || [], claims: f.claims.map(({ id, text, value, unit, label, sourceUrl, basis }) => ({ id, text, value, unit, label, sourceUrl, basis })) }, null, 2) + '\n');
+  fs.writeFileSync(`src/data/claims/${slug}.json`, JSON.stringify({ slug, title: f.title, type: f.storyType, topic: f.topic || 'innovation', region: f.region || '', date, sponsored: !!f.sponsored, claims: f.claims.map(({ id, text, value, unit, label, sourceUrl, basis }) => ({ id, text, value, unit, label, sourceUrl, basis })) }, null, 2) + '\n');
   if (!live) {
     const queue = fs.existsSync('review-queue.json') ? JSON.parse(fs.readFileSync('review-queue.json', 'utf8')) : [];
     queue.push({ slug, qaPass: qa.pass, fails: qa.fails, warnings: qa.warnings || [], at: new Date().toISOString() });

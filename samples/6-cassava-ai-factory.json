@@ -1,0 +1,90 @@
+{
+  "factSheet": {
+    "title": "Cassava adds Nvidia's Nemotron models to its AI Factory for African businesses",
+    "storyType": "product_launch",
+    "region": "Africa",
+    "topic": "ai",
+    "home": false,
+    "embedUrl": null,
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Cassava Technologies has announced that it will offer Nvidia's Nemotron open models as a managed service on its AI Factory, its Nvidia-powered computing platform.",
+        "sourceUrl": "https://techweez.com/2026/10/21/cassava-adds-nvidia-nemotron-models-to-its-ai-platform-for-african-businesses/",
+        "basis": "verified"
+      },
+      {
+        "id": "c2",
+        "text": "The service gives African businesses API access to AI tools and managed computing.",
+        "sourceUrl": "https://techweez.com/2026/10/21/cassava-adds-nvidia-nemotron-models-to-its-ai-platform-for-african-businesses/",
+        "basis": "verified"
+      },
+      {
+        "id": "c3",
+        "text": "Cassava is also using Nvidia OpenShell to combine computing, controlled agent activity and independent security enforcement, as AI agents gain access to business systems.",
+        "sourceUrl": "https://techweez.com/2026/10/21/cassava-adds-nvidia-nemotron-models-to-its-ai-platform-for-african-businesses/",
+        "basis": "verified"
+      },
+      {
+        "id": "c4",
+        "text": "Cassava's Group Chief Technology and AI Officer, Ahmed El Beheiry, said expanding the AI Factory across its markets is about creating the capacity and economics businesses need to build and deploy AI solutions at scale.",
+        "sourceUrl": "https://techweez.com/2026/10/21/cassava-adds-nvidia-nemotron-models-to-its-ai-platform-for-african-businesses/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c5",
+        "text": "Cassava first announced its AI Factory in March 2025, with data centres in South Africa, Egypt, Kenya, Morocco and Nigeria in line for upgrades with Nvidia hardware, and said the aim was to keep data within Africa's borders.",
+        "sourceUrl": "https://techweez.com/2026/10/21/cassava-adds-nvidia-nemotron-models-to-its-ai-platform-for-african-businesses/",
+        "basis": "verified"
+      },
+      {
+        "id": "c6",
+        "text": "Bloomberg reported that Cassava could invest up to $720 million in the AI factory.",
+        "sourceUrl": "https://www.moneyweb.co.za/news/tech/nvidia-cassavas-ai-factory-in-africa-tie-up-to-cost-720m/",
+        "basis": "verified",
+        "value": 720,
+        "unit": "million dollars",
+        "label": "Reported investment"
+      },
+      {
+        "id": "c7",
+        "text": "South Africa was to receive the first 3,000 Nvidia GPUs by June 2025.",
+        "sourceUrl": "https://www.moneyweb.co.za/news/tech/nvidia-cassavas-ai-factory-in-africa-tie-up-to-cost-720m/",
+        "basis": "verified",
+        "value": 3000,
+        "unit": "GPUs",
+        "label": "First South Africa deployment"
+      },
+      {
+        "id": "c8",
+        "text": "In November 2025, at Africa Tech Festival in Cape Town, Cassava launched what it called Africa's first GPU-as-a-service, using Nvidia AI computing.",
+        "sourceUrl": "https://www.connectingafrica.com/ai/atf-2025-cassava-launches-africa-s-first-gpu-as-a-service",
+        "basis": "verified"
+      },
+      {
+        "id": "c9",
+        "text": "Cassava founder Strive Masiyiwa said at the festival that the company had acquired 12,000 Nvidia GPUs.",
+        "sourceUrl": "https://www.connectingafrica.com/ai/atf-2025-cassava-launches-africa-s-first-gpu-as-a-service",
+        "basis": "company-stated",
+        "value": 12000,
+        "unit": "GPUs",
+        "label": "GPUs acquired"
+      },
+      {
+        "id": "c10",
+        "text": "In November 2025 Cassava agreed to provide computing capacity to Rockefeller Foundation grantees across eight countries, including Kenya.",
+        "sourceUrl": "https://techweez.com/2026/10/21/cassava-adds-nvidia-nemotron-models-to-its-ai-platform-for-african-businesses/",
+        "basis": "verified"
+      },
+      {
+        "id": "c11",
+        "text": "Cassava says its AI factory targets researchers at universities, startups and developers in sectors including health and fintech, and governments.",
+        "sourceUrl": "https://www.moneyweb.co.za/news/tech/nvidia-cassavas-ai-factory-in-africa-tie-up-to-cost-720m/",
+        "basis": "company-stated"
+      }
+    ],
+    "flashcards": []
+  },
+  "dek": "Cassava will offer Nvidia's Nemotron open models as a managed service, giving African businesses API access and managed computing.",
+  "article": "> **Key takeaways**\n>\n> - Cassava Technologies will offer Nvidia's Nemotron open models as a managed service on its AI Factory. [c1]\n> - The service gives African businesses API access to AI tools and managed computing. [c2]\n> - The AI Factory was first announced in March 2025, with a stated aim of keeping data within Africa's borders. [c5]\n> - Cassava's founder said the company had acquired 12,000 Nvidia GPUs. [c9]\n\n## Why it matters\n\nCassava's chief technology and AI officer says expanding the AI Factory is about creating the capacity and economics businesses need to build and deploy AI at scale. [c4] The company says it targets researchers, startups and developers in sectors including health and fintech, and governments. [c11]\n\n## What it does\n\n### Models and computing\n\nCassava will offer Nvidia's Nemotron open models as a managed service on its AI Factory. [c1] The service gives African businesses API access to AI tools and managed computing. [c2]\n\n### Agent security\n\nCassava is also using Nvidia OpenShell to combine computing, controlled agent activity and independent security enforcement, as AI agents gain access to business systems. [c3]\n\n## How it got here\n\n- March 2025: Cassava first announced the AI Factory, with data centres in South Africa, Egypt, Kenya, Morocco and Nigeria in line for upgrades with Nvidia hardware. [c5]\n- Bloomberg reported that Cassava could invest up to $720 million in the project. [c6]\n- South Africa was to receive the first 3,000 Nvidia GPUs by June 2025. [c7]\n- November 2025: Cassava launched what it called Africa's first GPU-as-a-service. [c8]\n- Founder Strive Masiyiwa said the company had acquired 12,000 Nvidia GPUs. [c9]\n- Cassava agreed to provide computing capacity to Rockefeller Foundation grantees across eight countries, including Kenya. [c10]"
+}

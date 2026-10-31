@@ -2,23 +2,51 @@
 import Base from '../layouts/Base.astro';
 import PostList from '../components/PostList.astro';
 import Newsletter from '../components/Newsletter.astro';
-import { visiblePosts } from '../data/posts';
 import cfg from '../../config.json';
-const posts = await visiblePosts();
+import { latestPosts } from '../data/posts';
+
+const posts = await latestPosts();   // each article appears on one page: Latest, or its topic page
 ---
 <Base>
-  <div class="intro">
-    <p>{cfg.tagline}</p>
-    {posts.length > 3 && <input class="search" id="q" type="search" placeholder="Search posts" aria-label="Search posts" />}
+  <section class="grid items-center gap-10 py-14 md:grid-cols-2 md:gap-14 md:py-24" aria-labelledby="hero-title">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-widest text-muted">{cfg.hero.kicker}</p>
+      <h1 id="hero-title" class="mt-4 font-head text-5xl font-bold uppercase leading-none text-ink md:text-7xl">{cfg.hero.title}</h1>
+      <p class="mt-6 max-w-md text-lg text-muted">{cfg.tagline}</p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a class="btn" href="#latest">Read the latest</a>
+        <a class="btn alt" href="/submit/">Submit a startup</a>
+      </div>
+    </div>
+    <figure id="heromedia" class="relative m-0 overflow-hidden rounded-3xl border border-rule shadow-2xl">
+      <img class="block h-auto w-full" src="/brand/mood.webp" alt="HD Point, AI and Innovation, est. 2026: steel letters beside stacked charcoal blocks and a chrome sphere" width="1376" height="768" fetchpriority="high" />
+      <button class="play" type="button" id="playintro" aria-label="Play the 10-second HD Point intro video">
+        <span class="pbtn"><i aria-hidden="true"></i>Watch the intro</span>
+      </button>
+    </figure>
+  </section>
+
+  <div id="latest" class="mb-8 flex flex-wrap items-end justify-between gap-4 border-t border-rule pt-8">
+    <h2 class="font-head text-4xl font-bold uppercase tracking-wide text-ink">Latest</h2>
+    {posts.length > 6 && <input id="q" class="w-full max-w-xs" type="search" placeholder="Search posts" aria-label="Search posts" />}
   </div>
-  {posts.length === 0 && <p class="empty">No posts yet. New posts appear here once they pass review.</p>}
+  {posts.length === 0 && <p class="text-muted">No posts yet. New posts appear here once they pass review.</p>}
   <PostList posts={posts} lead />
   <Newsletter place="home" />
   <script is:inline>
     (function () {
+      // Intro video: plays only when the reader asks (no autoplay), with controls.
+      var b = document.getElementById('playintro'), fig = document.getElementById('heromedia');
+      if (b && fig) b.addEventListener('click', function () {
+        var v = document.createElement('video');
+        v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto'; v.poster = '/brand/mood.jpg';
+        v.setAttribute('aria-label', 'HD Point intro: an animated logo reveal, 10 seconds, with sound');
+        var s = document.createElement('source'); s.src = '/brand/hd-point-intro.mp4'; s.type = 'video/mp4'; v.appendChild(s);
+        fig.textContent = ''; fig.appendChild(v); v.focus();
+        if (window.track) window.track('Intro video played');
+      });
       var q = document.getElementById('q'); if (!q) return;
-      var items = [].slice.call(document.querySelectorAll('#posts .card')), none = document.getElementById('nomatch');
-      var tracked = false;
+      var items = [].slice.call(document.querySelectorAll('#posts .card')), none = document.getElementById('nomatch'), tracked = false;
       q.addEventListener('input', function () {
         if (!tracked && window.track) { window.track('Search'); tracked = true; }
         var v = q.value.trim().toLowerCase(), n = 0;

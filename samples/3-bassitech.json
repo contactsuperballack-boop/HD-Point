@@ -3,10 +3,6 @@
     "title": "BassiTech, an Abuja consultancy, points to a 12-week AI skills programme for 100 young people",
     "storyType": "startup_feature",
     "region": "Nigeria",
-    "topics": [
-      "ai",
-      "innovation"
-    ],
     "embedUrl": null,
     "claims": [
       {
@@ -86,7 +82,9 @@
         "a": "Fintech, telecoms, agriculture and media.",
         "claimId": "c2"
       }
-    ]
+    ],
+    "home": false,
+    "topic": "innovation"
   },
   "article": "> **Key takeaways**\n>\n> - BassiTech Solutions describes itself as an Abuja-based technology consulting company offering strategy, software, proposals and digital skills. [c1]\n> - It says its Digital Wings Initiative is an AI-focused digital skills programme in Taraba State. [c3]\n> - The programme is designed for 100 young people. [c4]\n> - It runs for 12 weeks. [c5]\n\n## What it does\n\nThe company says it serves businesses and organisations in fintech, telecoms, agriculture and media. [c2]\n\n### Digital Wings Initiative\n\nBassiTech says the initiative is an AI-focused digital skills programme in Taraba State. [c3] It is designed for 100 young people [c4] and runs for 12 weeks. [c5]\n\n### Other work\n\nThe company says it has designed 2 farming programmes for Kudan LGA, [c6] and its site lists 5 projects and ventures in total. [c7]\n\n## Who is behind it\n\nBassiTech says it is led by founder Anas Abubakar Bassi, a Computer Engineer who studied at Ahmadu Bello University, Zaria. [c8]",
   "dek": "BassiTech, an Abuja consultancy, says its Digital Wings programme is designed for 100 young people over 12 weeks."

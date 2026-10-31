@@ -15,7 +15,7 @@ export function reportHtml(f) {
   const date = (f.publishedAt || '').slice(0, 10);
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(f.title)}: report | ${esc(SITE_NAME)}</title>
 <style>
-:root{--ink:#14213D;--indigo:#1B2A6B;--paper:#F7F8FA;--ochre:#F2B134;--stated:#8A5A00;--rule:#C9CDE0;--muted:#505A7A}
+:root{--ink:#141926;--indigo:#232B3D;--paper:#F4F6FA;--ochre:#8F99AD;--stated:#4A5568;--rule:#D3D9E4;--muted:#4A5568}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 Georgia,'Times New Roman',serif}
 .page{max-width:48rem;margin:0 auto;padding:2.5rem 1.5rem 4rem}
 h1,h2,th,.meta,.b,button,.ref{font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif}

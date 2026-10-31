@@ -1,0 +1,77 @@
+{
+  "slug": "nigeria-s-n-atlas-an-open-source-language-model-for-yoruba-hausa-igbo-",
+  "title": "Nigeria's N-ATLAS: an open-source language model for Yoruba, Hausa, Igbo and Nigerian English",
+  "type": "model_launch",
+  "topic": "ai",
+  "region": "Nigeria",
+  "date": "2026-10-30T19:41:48.100Z",
+  "sponsored": false,
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Nigeria's Minister of Communications, Innovation and Digital Economy, Dr Bosun Tijani, unveiled N-ATLAS, an open-source language model, on the sidelines of the 80th United Nations General Assembly in September 2025.",
+      "sourceUrl": "https://techcabal.com/2025/09/25/nigerian-government-awarri-launch-n-atlas/",
+      "basis": "verified"
+    },
+    {
+      "id": "c2",
+      "text": "N-ATLAS supports Yoruba, Hausa, Igbo and Nigerian-accented English.",
+      "sourceUrl": "https://iafrica.com/nigeria-launches-n-atlas-ai-model-to-support-local-languages-and-accents/",
+      "basis": "verified"
+    },
+    {
+      "id": "c3",
+      "text": "It was built by the National Centre for Artificial Intelligence and Robotics in collaboration with Awarri Technologies and other partners.",
+      "sourceUrl": "https://techdigest.ng/launches-atlas-nigeria-first/",
+      "basis": "verified"
+    },
+    {
+      "id": "c4",
+      "text": "The government first announced the project in April 2024.",
+      "sourceUrl": "https://techcabal.com/2025/09/25/nigerian-government-awarri-launch-n-atlas/",
+      "basis": "verified"
+    },
+    {
+      "id": "c5",
+      "text": "The language model, N-ATLaS-LLM, is fine-tuned from Llama-3 8B and designed to support African languages.",
+      "sourceUrl": "https://www.nimdzi.com/language-technology-radar/ncair/",
+      "basis": "verified"
+    },
+    {
+      "id": "c6",
+      "text": "It is reported to have been trained on more than 400 million tokens of multilingual instruction data.",
+      "sourceUrl": "https://www.tvcnews.tv/fg-unveils-ai-model-for-local-language-during-unga/",
+      "basis": "verified"
+    },
+    {
+      "id": "c7",
+      "text": "The release includes language-specific speech recognition models that can transcribe radio, television and online video into captions and subtitles.",
+      "sourceUrl": "https://iafrica.com/nigeria-launches-n-atlas-ai-model-to-support-local-languages-and-accents/",
+      "basis": "verified"
+    },
+    {
+      "id": "c8",
+      "text": "Documentation for the model is published on Hugging Face.",
+      "sourceUrl": "https://iafrica.com/nigeria-launches-n-atlas-ai-model-to-support-local-languages-and-accents/",
+      "basis": "verified"
+    },
+    {
+      "id": "c9",
+      "text": "TechCabal reports that its significance depends on whether researchers, developers and startups can turn the launch into practical tools for classrooms, clinics and farms, despite funding and infrastructure gaps.",
+      "sourceUrl": "https://techcabal.com/2025/09/25/nigerian-government-awarri-launch-n-atlas/",
+      "basis": "verified"
+    },
+    {
+      "id": "c10",
+      "text": "Awarri says developers, researchers and innovators can use N-ATLAS to build tools for education, governance and health.",
+      "sourceUrl": "https://www.awarri.com/ai-product",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c11",
+      "text": "Awarri also says it is launching a locally trained, voice-first AI assistant that converses in Yoruba, Hausa, Igbo and Pidgin.",
+      "sourceUrl": "https://www.awarri.com/ai-product",
+      "basis": "company-stated"
+    }
+  ]
+}

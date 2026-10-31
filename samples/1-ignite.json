@@ -3,10 +3,6 @@
     "title": "Ignite sets out six on-demand AI services, delivered remotely from Africa",
     "storyType": "startup_feature",
     "region": "Africa",
-    "topics": [
-      "ai",
-      "innovation"
-    ],
     "embedUrl": null,
     "claims": [
       {
@@ -65,7 +61,9 @@
         "a": "Trustbridge Corp.",
         "claimId": "c5"
       }
-    ]
+    ],
+    "home": false,
+    "topic": "startups"
   },
   "article": "> **Key takeaways**\n>\n> - Ignite describes itself as an SI-native company that provides products, data, experts, evaluation, benchmarks and intelligence as a service. [c1]\n> - The company says it delivers this work through three arms: iBuild, iStudios and Ignite Academy. [c2]\n> - It lists six services, each offered as a service. [c3]\n> - It says it works remotely from Africa so that teams anywhere can work with it. [c4]\n\n## What it does\n\nIgnite lists six services in all, each offered on demand: SI products, data, experts, evaluation, benchmark and intelligence. [c3]\n\n### Training\n\nOn training, the company says Ignite Academy develops SI-native experts, with capstone projects and portfolios as part of the programme. [c6]\n\n## Who is behind it\n\nIgnite says it is part of Trustbridge Corp, which provides its ownership, governance and long-term direction. [c5]",
   "dek": "Ignite says it offers six on-demand services, from products and data to evaluation, delivered remotely from Africa."

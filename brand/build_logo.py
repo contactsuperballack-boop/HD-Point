@@ -8,10 +8,10 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 S = 14            # monogram stroke weight
 W = 12            # "net" stroke weight
-INK, INK_DARK = '#14213D', '#E8EBF5'
-GRAD_LIGHT = ('#101A52', '#3A4FD6')    # deep indigo -> bright indigo
-GRAD_DARK = ('#C4CEFF', '#7F8FFF')
-NODE = '#F2B134'                       # the one warm accent
+INK, INK_DARK = '#141926', '#E8ECF4'
+GRAD_LIGHT = ('#1B2230', '#4A5570')    # graphite -> slate
+GRAD_DARK = ('#F7F9FC', '#9AA7C0')     # silver
+NODE = 'url(#sph)'                     # the point: a chrome sphere
 
 def mark_paths(fill, node=True, stroke_attr=None):
     """H and D share a stem. The crossbar carries a single 'node' dot: the network."""
@@ -20,7 +20,7 @@ def mark_paths(fill, node=True, stroke_attr=None):
          f'<path d="M10 0V100"/><path d="M54 0V100"/>'
          f'<path d="M66 7H66A43 43 0 0 1 66 93H54M54 7H66"/></g>')
     p += f'<path d="M10 50H54" fill="none" stroke="{fill}" stroke-width="{S}"/>'
-    if node: p += f'<circle cx="32" cy="50" r="5.4" fill="{NODE}"/>'
+    if node: p += f'<circle cx="32" cy="50" r="6.6" fill="{NODE}"/>'
     return p
 
 def point_paths(color, x0):
@@ -37,21 +37,21 @@ def point_paths(color, x0):
 def lockup(grad, ink, uid):
     a, b = grad
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 126" role="img" aria-label="HD Point">'
-            f'<defs><linearGradient id="g{uid}" x1="0" y1="0" x2="116" y2="100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="{a}"/><stop offset="1" stop-color="{b}"/></linearGradient></defs>'
+            f'<defs><linearGradient id="g{uid}" x1="0" y1="0" x2="116" y2="100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="{a}"/><stop offset="1" stop-color="{b}"/></linearGradient><radialGradient id="sph" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.45" stop-color="#A9B4CA"/><stop offset="1" stop-color="#2B3242"/></radialGradient></defs>'
             f'{mark_paths(f"url(#g{uid})")}{point_paths(ink, 134)}</svg>')
 
 def mark_only(grad, uid, vb='0 0 116 100'):
     a, b = grad
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vb}" role="img" aria-label="HD Point">'
-            f'<defs><linearGradient id="g{uid}" x1="0" y1="0" x2="116" y2="100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="{a}"/><stop offset="1" stop-color="{b}"/></linearGradient></defs>'
+            f'<defs><linearGradient id="g{uid}" x1="0" y1="0" x2="116" y2="100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="{a}"/><stop offset="1" stop-color="{b}"/></linearGradient><radialGradient id="sph" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.45" stop-color="#A9B4CA"/><stop offset="1" stop-color="#2B3242"/></radialGradient></defs>'
             f'{mark_paths(f"url(#g{uid})")}</svg>')
 
 def icon(size=512, radius=0.22):
     r = int(size * radius); m = size * 0.62; sc = m / 116; ox = (size - 116 * sc) / 2; oy = (size - 100 * sc) / 2
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {size} {size}" role="img" aria-label="HD Point">'
-            f'<defs><linearGradient id="bg" x1="0" y1="0" x2="{size}" y2="{size}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#141E5A"/><stop offset="1" stop-color="#2F43C2"/></linearGradient></defs>'
+            f'<defs><linearGradient id="bg" x1="0" y1="0" x2="{size}" y2="{size}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2E364A"/><stop offset="1" stop-color="#0E1117"/></linearGradient><radialGradient id="sph" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.45" stop-color="#A9B4CA"/><stop offset="1" stop-color="#2B3242"/></radialGradient></defs>'
             f'<rect width="{size}" height="{size}" rx="{r}" fill="url(#bg)"/>'
-            f'<g transform="translate({ox:.1f} {oy:.1f}) scale({sc:.4f})">{mark_paths("#FFFFFF")}</g></svg>')
+            f'<g transform="translate({ox:.1f} {oy:.1f}) scale({sc:.4f})">{mark_paths("#F4F6FA")}</g></svg>')
 
 files = {
     'logo.svg': lockup(GRAD_LIGHT, INK, 'a'),
@@ -87,6 +87,11 @@ def render_pngs():
         og = (f'<div style="width:1200px;height:630px;display:flex;align-items:center;justify-content:center;'
               f'background:linear-gradient(135deg,#0B1230 0%,#1B2A6B 100%)">{sized(files["logo-dark.svg"], 660, 200)}</div>')
         shot(og, 1200, 630, 'og-default.png')
+        mood = OUT / 'mood.jpg'
+        if mood.exists():                                  # use the supplied mood image as the link-preview card
+            from PIL import Image
+            im = Image.open(mood).convert('RGB'); w, h = im.size; nh = int(w * 630 / 1200); top = max(0, (h - nh) // 2)
+            im.crop((0, top, w, top + nh)).resize((1200, 630), Image.LANCZOS).save(OUT / 'og-default.png', optimize=True)
         b.close()
     print('wrote PNGs: logo, logo-dark, icon-512, apple-touch-icon, avatar-1080, og-default')
 

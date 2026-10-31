@@ -1,0 +1,98 @@
+{
+  "slug": "nigeria-s-national-ai-strategy-five-pillars-a-70-skills-target-and-an-",
+  "title": "Nigeria's National AI Strategy: five pillars, a 70% skills target and an execution gap",
+  "type": "ecosystem",
+  "topic": "ai",
+  "region": "Nigeria",
+  "date": "2026-10-30T19:41:48.090Z",
+  "sponsored": false,
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Nigeria launched its National Artificial Intelligence Strategy in Lagos in April 2025, according to Nairametrics.",
+      "sourceUrl": "https://nairametrics.com/2025/04/16/nigeria-launches-national-ai-strategy-to-drive-ai-development-and-productivity/",
+      "basis": "verified"
+    },
+    {
+      "id": "c2",
+      "text": "The strategy is built on five pillars: building AI infrastructure, fostering an innovation ecosystem, driving AI adoption across sectors, ensuring responsible AI development, and establishing robust governance.",
+      "sourceUrl": "https://regulations.ai/regulations/RAI-NG-NA-NAISNXX-2024",
+      "basis": "verified"
+    },
+    {
+      "id": "c3",
+      "text": "A four-day workshop in Abuja brought together over 120 AI researchers and practitioners to draft the strategy, according to the Ministry of Communications, Innovation and Digital Economy.",
+      "sourceUrl": "https://fmcide.gov.ng/hon-minister-dr-bosun-tijani-wraps-up-artificial-intelligence-strategy-workshop-announces-groundbreaking-partnerships-with-cisco-21st-century-technologies-others/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c4",
+      "text": "A draft of the strategy was published in August 2024.",
+      "sourceUrl": "https://regulations.ai/regulations/RAI-NG-NA-NAISNXX-2024",
+      "basis": "verified"
+    },
+    {
+      "id": "c5",
+      "text": "The strategy cites a target to equip 70% of youth with AI-related skills.",
+      "value": 70,
+      "unit": "percent",
+      "label": "Youth AI-skills target",
+      "sourceUrl": "https://regulations.ai/regulations/RAI-NG-NA-NAISNXX-2024",
+      "basis": "verified"
+    },
+    {
+      "id": "c6",
+      "text": "Short-term items include setting up governance bodies, seeding demonstration projects, a national AI skills drive and pilot high-performance computing infrastructure.",
+      "sourceUrl": "https://regulations.ai/regulations/RAI-NG-NA-NAISNXX-2024",
+      "basis": "verified"
+    },
+    {
+      "id": "c7",
+      "text": "A policy brief by Tunani finds the strategy has few binding commitments, measurable targets or dedicated budget lines.",
+      "sourceUrl": "https://tunanihq.org/publications/nigeria-national-ai-strategy/",
+      "basis": "verified"
+    },
+    {
+      "id": "c8",
+      "text": "The brief says Nigeria spends 0.2% of GDP on research and development.",
+      "value": 0.2,
+      "unit": "percent of GDP",
+      "label": "Nigeria",
+      "sourceUrl": "https://tunanihq.org/publications/nigeria-national-ai-strategy/",
+      "basis": "verified"
+    },
+    {
+      "id": "c9",
+      "text": "It puts the global average at 2.2% of GDP.",
+      "value": 2.2,
+      "unit": "percent of GDP",
+      "label": "Global average",
+      "sourceUrl": "https://tunanihq.org/publications/nigeria-national-ai-strategy/",
+      "basis": "verified"
+    },
+    {
+      "id": "c10",
+      "text": "The brief says Nigeria has advanced on talent, through the 3MTT programme and the N-ATLAS language model, but lags peers on infrastructure, governance and R&D spending.",
+      "sourceUrl": "https://tunanihq.org/publications/nigeria-national-ai-strategy/",
+      "basis": "verified"
+    },
+    {
+      "id": "c11",
+      "text": "Minister Bosun Tijani has presented a vision for a National AI Trust at a convening hosted by Warwick Business School in London, describing it as the first institution of its kind in the world.",
+      "sourceUrl": "https://iafrica.com/nigeria-launches-vision-for-national-ai-trust-described-as-first-institution-of-its-kind-in-the-world/",
+      "basis": "verified"
+    },
+    {
+      "id": "c12",
+      "text": "He is also raising $2 billion for Project BRIDGE, an initiative to lay 90,000 kilometres of fibre-optic cable across Nigeria.",
+      "sourceUrl": "https://iafrica.com/nigeria-launches-vision-for-national-ai-trust-described-as-first-institution-of-its-kind-in-the-world/",
+      "basis": "verified"
+    },
+    {
+      "id": "c13",
+      "text": "In 2024 the ministry said Galaxy Backbone would partner with 21st Century Technologies on a national compute project open to local researchers, startups and government entities working on AI projects of national interest.",
+      "sourceUrl": "https://fmcide.gov.ng/hon-minister-dr-bosun-tijani-wraps-up-artificial-intelligence-strategy-workshop-announces-groundbreaking-partnerships-with-cisco-21st-century-technologies-others/",
+      "basis": "company-stated"
+    }
+  ]
+}

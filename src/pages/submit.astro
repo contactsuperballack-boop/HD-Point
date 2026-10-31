@@ -11,7 +11,7 @@ const types = [
   ['funding', 'A funding round'],
   ['skills_guide', 'Skills or training'],
 ];
-const topics = [['ai', 'AI'], ['innovation', 'Innovation'], ['leisure', 'Leisure'], ['lifestyle', 'Lifestyle']];
+const topics = [['startups', 'Startups'], ['ai', 'AI'], ['innovation', 'Innovation'], ['climate', 'Climate'], ['lifestyle', 'Lifestyle']];
 const first = [0, 1];
 const more = [2, 3, 4];
 ---
@@ -32,7 +32,7 @@ const more = [2, 3, 4];
           </select>
         </label>
         <label>Topic
-          <select id="topic" name="topic"><option value="">Not sure</option>{topics.map(([v, l]) => <option value={v}>{l}</option>)}</select>
+          <select id="topic" name="topic">{topics.map(([v, l]) => <option value={v}>{l}</option>)}</select>
         </label>
         <label>Headline
           <span class="hint">One plain sentence, up to 120 characters.</span>

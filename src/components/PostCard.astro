@@ -1,21 +1,25 @@
 ---
 import SourcingMeter from './SourcingMeter.astro';
-import { fmtDate, TYPE_LABEL } from '../data/format';
+import { topicLabel } from '../data/topics';
 const { post, lead = false } = Astro.props;
 const d = post.data;
-const kind = TYPE_LABEL[d.type] ?? d.type;
-const text = `${d.title} ${d.summary} ${kind} ${d.region}`.toLowerCase();
+const label = topicLabel(d.topic);
+const text = `${d.title} ${d.summary} ${label} ${d.region}`.toLowerCase();
 ---
-<li class:list={['card', { 'lead-card': lead }]} data-text={text}>
-  {d.image && <img src={d.image} alt="" width="1200" height="630" loading={lead ? 'eager' : 'lazy'} />}
-  <div class="cardbody">
-    <p class="meta">
-      {kind}, {d.region || 'Africa'}, {fmtDate(d.date)}, {d.read} min read
-      {d.sponsored && <span class="chip">Sponsored</span>}
-      {d.draft && <span class="chip draft">Draft</span>}
+<li class:list={['group relative flex flex-col overflow-hidden rounded-2xl border border-rule bg-surface transition duration-200 hover:-translate-y-0.5 hover:border-field hover:shadow-xl', lead && 'md:col-span-2 md:flex-row']} data-text={text}>
+  {d.image && <img class:list={['block h-auto w-full border-b border-rule object-cover object-left', lead && 'md:w-3/5 md:flex-none md:self-stretch md:border-b-0 md:border-r']} src={d.image} alt="" width="1200" height="630" loading={lead ? 'eager' : 'lazy'} />}
+  <div class:list={['flex flex-1 flex-col gap-3 p-6', lead && 'md:justify-center md:p-10']}>
+    <p class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-semibold uppercase tracking-widest text-muted">
+      <span class="text-ink">{label}</span>
+      <span aria-hidden="true">/</span>
+      <span>{d.read} min read</span>
+      {d.sponsored && <span class="rounded-full border border-stated px-2 py-0.5 text-xs text-ink">Sponsored</span>}
+      {d.draft && <span class="rounded-full border border-accent px-2 py-0.5 text-xs text-accent">Draft</span>}
     </p>
-    <h2><a href={`/posts/${post.id}/`}>{d.title}</a></h2>
-    <p class="sum">{d.summary}</p>
-    <SourcingMeter verified={d.verified} stated={d.stated} />
+    <h2 class:list={['font-head font-bold leading-tight text-ink', lead ? 'text-4xl md:text-5xl' : 'text-2xl']}>
+      <a class="stretch text-ink no-underline hover:text-brand" href={`/posts/${post.id}/`}>{d.title}</a>
+    </h2>
+    <p class:list={['line-clamp-3 text-muted', lead ? 'text-base' : 'text-sm']}>{d.summary}</p>
+    <div class="mt-auto pt-2"><SourcingMeter verified={d.verified} stated={d.stated} compact /></div>
   </div>
 </li>

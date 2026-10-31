@@ -1,0 +1,80 @@
+{
+  "slug": "ai-in-nollywood-how-nigerian-filmmakers-are-using-ai-tools-and-the-que",
+  "title": "AI in Nollywood: how Nigerian filmmakers are using AI tools, and the questions they face",
+  "type": "ecosystem",
+  "topic": "lifestyle",
+  "region": "Nigeria",
+  "date": "2026-10-30T19:41:47.995Z",
+  "sponsored": false,
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Nigerian filmmakers and digital creators are using AI to cut costs, expand storytelling possibilities and compete globally, industry insiders told Forbes Africa.",
+      "sourceUrl": "https://www.forbesafrica.com/current-affairs/2026/03/11/tell-stories-otherwise-not-told-how-nigerias-creatives-turn-to-ai-tools-to-boost-film-production",
+      "basis": "verified"
+    },
+    {
+      "id": "c2",
+      "text": "In March 2026, a YouTube-backed workshop in Lagos introduced filmmakers including Biodun Stephen and Omoni Oboli to Flow, an AI filmmaking tool developed by Google.",
+      "sourceUrl": "https://www.premiumtimesng.com/news/more-news/862915-youtube-introduces-nigerian-filmmakers-to-ai-powered-filmmaking-tool.html",
+      "basis": "verified"
+    },
+    {
+      "id": "c3",
+      "text": "Filmmakers at the workshop said AI could help them visualise scenes before filming, speed up conceptualisation and simulate scenes that would be expensive or difficult to shoot.",
+      "sourceUrl": "https://www.premiumtimesng.com/news/more-news/862915-youtube-introduces-nigerian-filmmakers-to-ai-powered-filmmaking-tool.html",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c4",
+      "text": "Actor and producer Omoni Oboli says she has used AI tools to generate story ideas, animate videos and create promotional materials.",
+      "sourceUrl": "https://www.forbesafrica.com/current-affairs/2026/03/11/tell-stories-otherwise-not-told-how-nigerias-creatives-turn-to-ai-tools-to-boost-film-production",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c5",
+      "text": "Travel and lifestyle creator Tayo Aina says he has used generative AI to recreate historical moments in his documentary-style videos when archival footage was unavailable.",
+      "sourceUrl": "https://www.forbesafrica.com/current-affairs/2026/03/11/tell-stories-otherwise-not-told-how-nigerias-creatives-turn-to-ai-tools-to-boost-film-production",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c6",
+      "text": "For the film Eshugbayi Eleko, AI was used to create establishing shots and briefly reconstruct Lagos as it looked in the late 19th and early 20th centuries, with some AI-generated sequences lasting only a few seconds, a filmmaker told NewsCrackers NG.",
+      "sourceUrl": "https://newscrackersng.com/ai-in-nollywood-between-faster-filmmaking-the-fight-to-preserve-nigerian-authenticity/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c7",
+      "text": "The Naija Artificial Intelligence Film Festival, founded by Obinna Okerekeocha, received 490 submissions for its debut, according to TechCabal.",
+      "value": 490,
+      "unit": "submissions",
+      "label": "Festival debut submissions",
+      "sourceUrl": "https://techcabal.com/2025/09/10/ai-in-nollywood-naiff/",
+      "basis": "verified"
+    },
+    {
+      "id": "c8",
+      "text": "Okerekeocha says he wants to train thousands of African AI filmmakers over the next five years and support tools trained on local languages, voices and cultures.",
+      "sourceUrl": "https://techcabal.com/2025/09/10/ai-in-nollywood-naiff/",
+      "basis": "company-stated"
+    },
+    {
+      "id": "c9",
+      "text": "Makemation, produced by Nigerian AI developer turned filmmaker Toyosi Akerele-Ogunsiji, was released in Nigerian cinemas in 2025 and has toured international festivals and universities.",
+      "sourceUrl": "https://theconversation.com/makemation-a-nollywood-movie-that-shows-ai-in-action-in-africa-277693",
+      "basis": "verified"
+    },
+    {
+      "id": "c10",
+      "text": "The producers of Makemation describe AI as both a storytelling subject and part of the production workflow, combining generative AI systems with live-action filmmaking.",
+      "sourceUrl": "https://theafricanmirror.africa/lifestyle/arts-and-entertainment/african-filmmakers-are-experimenting-with-ai-as-hollywood-debates-its-risks/",
+      "basis": "verified"
+    },
+    {
+      "id": "c11",
+      "text": "NewsCrackers NG says transparency about AI use could become increasingly important in Nollywood as audiences encounter more AI-generated images, voices and scenes.",
+      "sourceUrl": "https://newscrackersng.com/ai-in-nollywood-between-faster-filmmaking-the-fight-to-preserve-nigerian-authenticity/",
+      "basis": "company-stated"
+    }
+  ]
+}

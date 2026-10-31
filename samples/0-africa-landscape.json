@@ -3,15 +3,6 @@
     "title": "Africa's AI-native startups: where the funding sits and what is being built",
     "storyType": "ecosystem",
     "region": "Africa",
-    "topics": [
-      "ai",
-      "innovation"
-    ],
-    "sectors": [
-      "voice-language",
-      "agri-climate",
-      "funding"
-    ],
     "embedUrl": null,
     "claims": [
       {
@@ -111,7 +102,8 @@
         "basis": "verified"
       }
     ],
-    "flashcards": []
+    "flashcards": [],
+    "topic": "ai"
   },
   "dek": "Four markets took 85% of country-specific startup funding in 2026, while startups build for local languages and farms.",
   "article": "> **Key takeaways**\n>\n> - Nigeria raised $635 million from January to September 2026, ahead of Egypt on $445 million, Kenya on $201 million and South Africa on $182 million. [c1][c2][c3][c4]\n> - Those four markets took 85% of all country-specific startup funding, up from 83% in 2025. [c5]\n> - These are all-sector totals: in the first half of 2026, fintech was the largest funded sector at 41% ($556 million). [c6]\n> - Startups such as Botlhale AI, Amini and Aerobotics are building for African languages and for farms. [c9][c12][c13]\n\n## The landscape shift\n\nFunding is concentrated. Four markets took 85% of country-specific startup funding, up from 83% in 2025. [c5]\n\nThe money is also spreading. Tanzania, Côte d’Ivoire and Morocco each attracted more than $25 million in the first half of 2026. [c7]\n\n## What is being built\n\n### Voice and language\n\nUNESCO estimates that Africa is home to between 1,500 and 3,000 languages, according to a profile of Botlhale AI. [c8]\n\n- Botlhale AI, a South African startup, builds speech recognition and language tools for African languages, aimed at call centres. [c9]\n- Botlhale says up to 70% of calls in South Africa are in languages other than English. [c10]\n- The company says its models support 11 South African languages and it is expanding to Ghana, Kenya and Nigeria. [c11]\n\n### Agriculture and climate\n\n- Amini, a Kenyan startup, uses satellite imagery and AI to map environmental and agricultural data, including soil, vegetation and carbon levels. [c12]\n- Aerobotics, a South African company, combines AI, drones and data analytics to help farmers monitor crop health. [c13]\n\n## Where the activity is\n\n| Market | Funding, January to September 2026 | Source |\n|---|---|---|\n| Nigeria | $635 million | [c1] |\n| Egypt | $445 million | [c2] |\n| Kenya | $201 million | [c3] |\n| South Africa | $182 million | [c4] |\n\n## Limits of the data\n\nThe funding figures cover startups across all sectors, not AI startups alone. In the first half of 2026, fintech led at 41% ($556 million), followed by logistics and transport at 35% ($472 million) and agriculture and food at 7% ($93 million). [c6]\n\n## What comes next\n\nAfrica: The Big Deal is expected to publish a consolidated 2026 funding review before year-end, which will show whether Egypt's 27% share of first-half funding holds. [c14]"

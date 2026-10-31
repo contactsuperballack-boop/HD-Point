@@ -17,13 +17,12 @@ Where we differ on purpose: every sentence, bullet and table row carries a claim
 - A corrected, fully sourced version is the first sample post (`samples/0-africa-landscape.json`).
 
 ## 2. Topic map
-**Topics** (menu): AI, Innovation, Leisure, Lifestyle, Landscape, Models, Products, Startups, Skills, Research.
-**Sectors** (menu): Voice and language, Agriculture and climate, Credit and fintech, Health, Infrastructure, Policy and data, Skills and talent. (A Funding sector tag exists but is not shown in the menu.)
+**Topics** (menu): AI, Innovation, Climate, Lifestyle, Startups. Every article has exactly one topic and appears on exactly one page: Latest (for featured posts) or its topic page.
 
 | Pillar | What to cover | Best layout | Where stories come from |
 |---|---|---|---|
 | Voice and language | African-language speech, translation, WhatsApp and voice agents | launch, landscape | OpenAI, DeepMind, Hugging Face feeds; startup pages; company submissions |
-| Agriculture and climate | Satellite and sensor data, crop vision, soil-free farming | launch, landscape | Smartel and similar pages; TechCabal, Disrupt Africa |
+| Climate and food systems | Climate impacts and resilience, farming, food security, supply chains, satellite and sensor data, crop vision, soil-free farming, renewable energy for farms | launch, landscape, news | Smartel and similar pages; TechCabal, Disrupt Africa; official climate and food-security reports you add |
 | Credit and fintech | Alternative credit scoring, fraud, payments | news, launch | TechCabal, Techpoint, Disrupt Africa |
 | Health | Triage, clinic tools, health assistants | launch, news | Submissions; IT News Africa |
 | Infrastructure | GPUs, data centres, edge devices, low bandwidth | news, landscape | IT News Africa; Microsoft AI news |
@@ -51,7 +50,7 @@ Fill the brackets only with sourced facts. These are patterns, not stories.
 - [Programme] opens for [number] [people] in [place]
 
 **Landscape**
-- Africa's [sector] startups: where the funding sits and what is being built
+- Africa's [sector or climate theme] startups: where the funding sits and what is being built
 - [Country]'s AI startups in [year]: who is building what
 - Beyond the big four: [hubs] draw capital as [claim]
 - Building for [language or channel]: the companies and the limits of the data
@@ -84,3 +83,11 @@ Fill the brackets only with sourced facts. These are patterns, not stories.
 - Smartel: soil-free farming and the 90% water claim, with an independent expert source before it becomes a landscape piece.
 - Chassis: waiting on readable page text (needs the browser-based watcher).
 - Abuja City Walk: new blog posts as they appear (the current ones are months old).
+
+
+## 7. Climate and food systems: story angles
+- How [company] says its [technology] changes water, energy or yield, and who has checked the claim.
+- What [report] says about [crop, region or season], and where its data stops.
+- Who is building for farmers on low bandwidth: WhatsApp, voice and USSD tools.
+- Landscape: Africa's food-systems startups, by country and by what they sell.
+- Supply chains: what moves, what spoils, and the tools that track it (only with sourced figures).

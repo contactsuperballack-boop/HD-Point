@@ -3,23 +3,23 @@ title: "BassiTech, an Abuja consultancy, points to a 12-week AI skills programme
 summary: "BassiTech, an Abuja consultancy, says its Digital Wings programme is designed for 100 young people over 12 weeks."
 description: "BassiTech, an Abuja consultancy, says its Digital Wings programme is designed for 100 young people over 12 weeks."
 style: launch
-sectors: []
-date: 2026-10-24T07:15:48.285Z
+date: 2026-10-30T19:41:48.050Z
 type: startup_feature
 region: "Nigeria"
 sponsored: false
 draft: true
 verified: 0
 stated: 8
-topics: [ai, innovation]
+topic: innovation
+home: false
 assets: [hero, infographic, deck, flashcards]
 read: 1
-image: "/assets/bassitech-an-abuja-consultancy-points-to-a-12-week-ai-skills-programme/hero.svg"
+image: "/assets/bassitech-an-abuja-consultancy-points-to-a-12-week-ai-skills-programme/thumb.svg"
 ---
 
 > **From the company's own materials.** Claims marked "the company says" come from the company's website and were not independently verified.
 
-![BassiTech, an Abuja consultancy, points to a 12-week AI skills programme for 100 young people](/assets/bassitech-an-abuja-consultancy-points-to-a-12-week-ai-skills-programme/hero.svg)
+![Key figure: 100 young people, Programme participants](/assets/bassitech-an-abuja-consultancy-points-to-a-12-week-ai-skills-programme/thumb.svg)
 
 > **Key takeaways**
 >

@@ -1,0 +1,98 @@
+{
+  "factSheet": {
+    "title": "Dubai opens a free, AED 2.5 million global championship for AI-agent builders",
+    "storyType": "product_launch",
+    "region": "UAE",
+    "embedUrl": null,
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Dubai has launched the Create AI Agents Championship, a global competition for practical and scalable AI-agent solutions to real-world challenges, with a total prize pool of more than AED 2.5 million.",
+        "sourceUrl": "https://www.businesswire.com/news/home/20261008883373/en/Dubai-Launches-Global-Create-AI-Agents-Championship-with-Prize-Pool-Exceeding-AED-2.5-Million",
+        "basis": "company-stated",
+        "value": 2.5,
+        "unit": "million AED",
+        "label": "Prize pool"
+      },
+      {
+        "id": "c2",
+        "text": "Sheikh Hamdan bin Mohammed bin Rashid Al Maktoum, Crown Prince of Dubai, announced the launch and invited innovators from across the world.",
+        "sourceUrl": "https://knowledgemiddleeast.com/tech/sheikh-hamdan-bin-mohammed-launches-create-ai-agents-championship/",
+        "basis": "verified"
+      },
+      {
+        "id": "c3",
+        "text": "The organiser says the championship shifts the focus from developing digital applications to creating autonomous AI-agent systems built for real user needs and market requirements.",
+        "sourceUrl": "https://www.dubaichambers.com/en/w/hamdan-bin-mohammed-launches-create-ai-agents-championship-to-inspire-transformative-ideas-for-global-good",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c4",
+        "text": "The championship is part of the Create Apps in Dubai initiative, led by the Dubai Chamber of Digital Economy to support app development, digital skills and technology entrepreneurship.",
+        "sourceUrl": "https://knowledgemiddleeast.com/tech/sheikh-hamdan-bin-mohammed-launches-create-ai-agents-championship/",
+        "basis": "verified"
+      },
+      {
+        "id": "c5",
+        "text": "It has four core categories: Best Societal AI Agent, Best Personal AI Agent, Best Business AI Agent and Best Youth AI Agent.",
+        "sourceUrl": "https://www.dubaichamberdigital.com/en/create-ai-agents",
+        "basis": "company-stated",
+        "value": 4,
+        "unit": "categories",
+        "label": "Core categories"
+      },
+      {
+        "id": "c6",
+        "text": "The Best Societal category recognises agents that strengthen social cohesion and inclusion and support education, sustainability and social resilience.",
+        "sourceUrl": "https://www.dubaichambers.com/en/w/hamdan-bin-mohammed-launches-create-ai-agents-championship-to-inspire-transformative-ideas-for-global-good",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c7",
+        "text": "The Best Business category recognises agents that help public and private organisations improve workflows, services, decision-making and customer experience.",
+        "sourceUrl": "https://www.dubaichambers.com/en/w/hamdan-bin-mohammed-launches-create-ai-agents-championship-to-inspire-transformative-ideas-for-global-good",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c8",
+        "text": "One of the four category winners will also receive the title of Dubai AI Agent of the Year.",
+        "sourceUrl": "https://www.dubaichamberdigital.com/en/create-ai-agents",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c9",
+        "text": "Participants create an AI agent prototype, a pitch deck and a demo video, and 24 teams move forward to pitch in the semi-final.",
+        "sourceUrl": "https://www.dubaichamberdigital.com/en/create-ai-agents",
+        "basis": "company-stated",
+        "value": 24,
+        "unit": "teams",
+        "label": "Semi-finalist teams"
+      },
+      {
+        "id": "c10",
+        "text": "The Digital Academy offers 10 short videos that explain AI agents without requiring a technical background.",
+        "sourceUrl": "https://www.dubaichamberdigital.com/en/create-ai-agents",
+        "basis": "company-stated",
+        "value": 10,
+        "unit": "videos",
+        "label": "Academy videos"
+      },
+      {
+        "id": "c11",
+        "text": "Participants also get access to workshops, specialised sessions and mentorship.",
+        "sourceUrl": "https://www.dubaichambers.com/en/w/hamdan-bin-mohammed-launches-create-ai-agents-championship-to-inspire-transformative-ideas-for-global-good",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c12",
+        "text": "Participation in the championship is free of charge.",
+        "sourceUrl": "https://www.dubaichamberdigital.com/en/create-ai-agents",
+        "basis": "company-stated"
+      }
+    ],
+    "flashcards": [],
+    "topic": "ai"
+  },
+  "dek": "Dubai's Create AI Agents Championship offers more than AED 2.5 million in prizes, is free to enter and invites innovators worldwide.",
+  "article": "> **Key takeaways**\n>\n> - Dubai has launched the Create AI Agents Championship, a global competition with a prize pool of more than AED 2.5 million. [c1]\n> - The Crown Prince of Dubai invited innovators from across the world. [c2]\n> - There are four core categories, and participation is free of charge. [c5][c12]\n> - Teams build an AI agent prototype, a pitch deck and a demo video, and 24 teams move on to the semi-final. [c9]\n\n## Why it matters\n\nThe organiser says the championship shifts the focus from developing digital applications to creating autonomous AI-agent systems built for real user needs and market requirements. [c3]\n\nIt is part of the Create Apps in Dubai initiative, led by the Dubai Chamber of Digital Economy to support app development, digital skills and technology entrepreneurship. [c4]\n\n## What it offers\n\n### Four categories\n\n- Best Societal AI Agent, which recognises agents that strengthen social cohesion and inclusion and support education, sustainability and social resilience. [c6]\n- Best Business AI Agent, which recognises agents that help public and private organisations improve workflows, services, decision-making and customer experience. [c7]\n- Best Personal AI Agent and Best Youth AI Agent complete the four core categories. [c5]\n\n### Prizes and format\n\nOne of the four category winners will also receive the title of Dubai AI Agent of the Year. [c8] Participants create an AI agent prototype, a pitch deck and a demo video, and 24 teams move forward to pitch in the semi-final. [c9]\n\n### Support for builders\n\nThe Digital Academy offers 10 short videos that explain AI agents without requiring a technical background. [c10] Participants also get access to workshops, specialised sessions and mentorship. [c11]\n\n## How to enter\n\nParticipation in the championship is free of charge. [c12]"
+}

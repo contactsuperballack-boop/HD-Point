@@ -7,7 +7,8 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import SourcingMeter from '../../components/SourcingMeter.astro';
 import { visiblePosts } from '../../data/posts';
-import { fmtDate, TYPE_LABEL } from '../../data/format';
+import { fmtDate } from '../../data/format';
+import { topicLabel } from '../../data/topics';
 
 export async function getStaticPaths() {
   const posts = await visiblePosts();
@@ -27,19 +28,19 @@ const jsonLd = {
 };
 ---
 <Base title={d.title} description={d.summary} image={ogImage} type="article" jsonLd={jsonLd}>
-  <article class="narrow">
+  <article class="narrow pt-12 pb-8">
     <p class="meta">
-      {TYPE_LABEL[d.type] ?? d.type}, {d.region || 'Africa'}, {fmtDate(d.date)}, {d.read} min read
+      {topicLabel(d.topic)}, {fmtDate(d.date)}, {d.read} min read
       {d.sponsored && <span class="chip">Sponsored</span>}
       {d.draft && <span class="chip draft">Draft, not public</span>}
     </p>
     {fixes.map((c) => <div class="notice correction"><strong>Correction, {fmtDate(new Date(c.date))}:</strong> {c.summary}</div>)}
     <h1>{d.title}</h1>
     <p class="dek">{d.summary}</p>
-    <SourcingMeter verified={d.verified} stated={d.stated} legend />
+    <div class="mb-10"><SourcingMeter verified={d.verified} stated={d.stated} legend /></div>
     <div class="prose"><Content /></div>
     <p><button type="button" class="share" data-title={d.title}>Share this post</button></p>
-    </article>
+  </article>
   <Newsletter place="post" />
   <script is:inline>
     document.querySelectorAll('.share').forEach(function (b) {

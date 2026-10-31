@@ -23,7 +23,7 @@ export function deckHtml(f) {
   const slides = buildSlides(f), n = slides.length;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(f.title)} | ${esc(SITE_NAME)}</title>
 <style>
-:root{--ink:#14213D;--indigo:#1B2A6B;--paper:#F7F8FA;--ochre:#F2B134;--stated:#8A5A00;--rule:#C9CDE0;--muted:#505A7A}
+:root{--ink:#E8ECF4;--indigo:#DDE3EF;--paper:#0D1017;--ochre:#A5AEC0;--stated:#C7CFDD;--rule:#2A3243;--muted:#A5AEC0}
 *{box-sizing:border-box}html,body{height:100%;margin:0}
 body{display:flex;flex-direction:column;background:var(--paper);color:var(--ink);font:clamp(16px,2.2vw,24px)/1.5 Georgia,'Times New Roman',serif}
 #deck{flex:1;min-height:0;position:relative}
@@ -40,13 +40,13 @@ h2{font-size:clamp(22px,3.6vw,40px);color:var(--indigo);margin:0 0 .6em}
 .lab{margin:.3em 0 1em;color:var(--muted)}
 .claim{max-width:34ch;margin:0 0 .6em}.claim.lg{font-size:1.35em;max-width:28ch}
 .b{display:inline-block;padding:.1em .6em;font-size:.65em;font-weight:700;border:2px solid var(--indigo)}
-.b.v{background:var(--indigo);color:#fff}.b.s{border-color:var(--stated);color:var(--ink)}
+.b.v{background:var(--indigo);color:#0D1017}.b.s{border-color:var(--stated);color:var(--ink)}
 .ref{font:.65em system-ui,sans-serif;color:var(--muted);margin-left:.5em}
 .chart svg{width:100%;height:auto;max-height:65vh;border:1px solid var(--rule)}
 ul{padding-left:1.1em;overflow-wrap:anywhere}.note{color:var(--muted);font-size:.8em}
 nav{display:flex;align-items:center;justify-content:space-between;padding:10px clamp(16px,4vw,40px);border-top:1px solid var(--rule)}
-button{font:inherit;font-size:.7em;padding:.5em 1.1em;border:2px solid var(--indigo);background:#fff;color:var(--indigo);cursor:pointer}
-button:hover{background:var(--indigo);color:#fff}button:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+button{font:inherit;font-size:.7em;padding:.5em 1.1em;border:2px solid var(--indigo);background:#141923;color:var(--indigo);cursor:pointer}
+button:hover{background:var(--indigo);color:#0D1017}button:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
 #pos{font-size:.7em;color:var(--muted)}
 </style></head><body>
 <main id="deck">${slides.map((x, i) => `<section class="slide"${i ? ' hidden' : ''} aria-label="Slide ${i + 1} of ${n}">${x}</section>`).join('')}</main>

@@ -3,23 +3,23 @@ title: "Abuja City Walk sets out a five-pillar plan for a mixed-use urban distri
 summary: "Abuja City Walk lists five pillars for a planned lifestyle district: business, lifestyle, innovation, culture and community."
 description: "Abuja City Walk lists five pillars for a planned lifestyle district: business, lifestyle, innovation, culture and community."
 style: news
-sectors: []
-date: 2026-10-24T07:15:48.280Z
+date: 2026-10-30T19:41:48.029Z
 type: local_news
 region: "Nigeria"
 sponsored: false
 draft: true
 verified: 0
 stated: 6
-topics: [lifestyle, innovation]
+topic: lifestyle
+home: false
 assets: [hero, infographic]
 read: 1
-image: "/assets/abuja-city-walk-sets-out-a-five-pillar-plan-for-a-mixed-use-urban-dist/hero.svg"
+image: "/assets/abuja-city-walk-sets-out-a-five-pillar-plan-for-a-mixed-use-urban-dist/thumb.svg"
 ---
 
 > **From the company's own materials.** Claims marked "the company says" come from the company's website and were not independently verified.
 
-![Abuja City Walk sets out a five-pillar plan for a mixed-use urban district](/assets/abuja-city-walk-sets-out-a-five-pillar-plan-for-a-mixed-use-urban-dist/hero.svg)
+![Key figure: 5 pillars, Pillars listed](/assets/abuja-city-walk-sets-out-a-five-pillar-plan-for-a-mixed-use-urban-dist/thumb.svg)
 
 Abuja City Walk says its vision is to create Africa's most dynamic urban district, blending world-class infrastructure with cultural authenticity and sustainable living. [[c1]](#src-c1) The project describes itself as an integrated lifestyle destination in Abuja, planned to foster economic growth, cultural exchange and community well-being. [[c2]](#src-c2)
 

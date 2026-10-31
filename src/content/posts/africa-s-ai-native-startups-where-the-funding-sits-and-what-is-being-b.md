@@ -3,21 +3,21 @@ title: "Africa's AI-native startups: where the funding sits and what is being bu
 summary: "Four markets took 85% of country-specific startup funding in 2026, while startups build for local languages and farms."
 description: "Four markets took 85% of country-specific startup funding in 2026, while startups build for local languages and farms."
 style: landscape
-sectors: [voice-language, agri-climate]
-date: 2026-10-24T07:15:48.290Z
+date: 2026-10-30T19:41:48.122Z
 type: ecosystem
 region: "Africa"
 sponsored: false
 draft: true
 verified: 12
 stated: 2
-topics: [ai, innovation]
+topic: ai
+home: true
 assets: [hero, chart, infographic, report]
 read: 2
-image: "/assets/africa-s-ai-native-startups-where-the-funding-sits-and-what-is-being-b/hero.svg"
+image: "/assets/africa-s-ai-native-startups-where-the-funding-sits-and-what-is-being-b/thumb.svg"
 ---
 
-![Africa's AI-native startups: where the funding sits and what is being built](/assets/africa-s-ai-native-startups-where-the-funding-sits-and-what-is-being-b/hero.svg)
+![Key figure: 635 million dollars, Nigeria](/assets/africa-s-ai-native-startups-where-the-funding-sits-and-what-is-being-b/thumb.svg)
 
 > **Key takeaways**
 >

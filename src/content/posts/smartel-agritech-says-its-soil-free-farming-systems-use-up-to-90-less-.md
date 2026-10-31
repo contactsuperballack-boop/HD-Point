@@ -3,23 +3,23 @@ title: "Smartel Agritech says its soil-free farming systems use up to 90% less w
 summary: "Smartel Agritech says its hydroponic systems use up to 90% less water than traditional farming."
 description: "Smartel Agritech says its hydroponic systems use up to 90% less water than traditional farming."
 style: launch
-sectors: []
-date: 2026-10-24T07:15:48.284Z
+date: 2026-10-30T19:41:48.040Z
 type: startup_feature
 region: "Africa"
 sponsored: false
 draft: true
 verified: 0
 stated: 6
-topics: [innovation]
+topic: innovation
+home: false
 assets: [hero, infographic, deck, flashcards]
 read: 1
-image: "/assets/smartel-agritech-says-its-soil-free-farming-systems-use-up-to-90-less-/hero.svg"
+image: "/assets/smartel-agritech-says-its-soil-free-farming-systems-use-up-to-90-less-/thumb.svg"
 ---
 
 > **From the company's own materials.** Claims marked "the company says" come from the company's website and were not independently verified.
 
-![Smartel Agritech says its soil-free farming systems use up to 90% less water](/assets/smartel-agritech-says-its-soil-free-farming-systems-use-up-to-90-less-/hero.svg)
+![Key figure: 90 percent, Less water than traditional farming](/assets/smartel-agritech-says-its-soil-free-farming-systems-use-up-to-90-less-/thumb.svg)
 
 > **Key takeaways**
 >

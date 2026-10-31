@@ -25,23 +25,32 @@
     "ai",
     "cairo",
     "cape town",
+    "carbon",
     "climate",
+    "climate change",
     "credit",
     "culture",
     "data center",
     "data centre",
     "digital",
     "drone",
+    "drought",
     "edge",
     "entertainment",
     "farm",
     "fintech",
+    "flood",
+    "food",
+    "food security",
+    "food system",
     "funding",
     "gpu",
     "health",
     "hospitality",
     "hub",
+    "hydroponic",
     "innovation",
+    "irrigation",
     "lagos",
     "language",
     "leisure",
@@ -52,19 +61,25 @@
     "nairobi",
     "nigeria",
     "nlp",
+    "nutrition",
     "policy",
     "regulation",
+    "renewable",
+    "resilience",
     "satellite",
     "smart city",
+    "solar",
     "sovereignty",
     "speech",
     "startup",
+    "supply chain",
     "telemedicine",
     "tourism",
     "translation",
     "travel",
     "ussd",
     "voice",
+    "weather",
     "wellness",
     "whatsapp"
   ],
@@ -119,7 +134,7 @@
   ],
   "maxExtraAssets": 3,
   "autoPublishSponsored": false,
-  "contactEmail": "info.timelapseai@gmail.com",
+  "contactEmail": "info.hdpoint@gmail.com",
   "siteUrl": "",
   "maxPerFeed": 4,
   "autoPublishTypes": [],
@@ -139,20 +154,21 @@
       "instagram"
     ],
     "profiles": {
-      "instagram": "",
-      "facebook": "",
-      "tiktok": "",
-      "youtube": "",
+      "instagram": "https://www.instagram.com/hdpoint.ai/",
+      "facebook": "https://www.facebook.com/hdpoint.ai",
+      "tiktok": "https://www.tiktok.com/@hdpoint.ai",
+      "youtube": "https://www.youtube.com/@hdpoint.ai",
       "x": "",
       "linkedin": ""
     }
   },
-  "tagline": "AI, innovation, leisure and lifestyle updates from Nigeria and across Africa. Every claim shows its source.",
+  "tagline": "AI, innovation, climate, lifestyle and startup news from Nigeria and across Africa. Every claim shows its source.",
   "topics": [
     "ai",
     "innovation",
-    "leisure",
-    "lifestyle"
+    "climate",
+    "lifestyle",
+    "startups"
   ],
   "watch": [
     {
@@ -161,8 +177,7 @@
       "url": "https://ignite-live-beta.vercel.app/",
       "type": "page",
       "topics": [
-        "ai",
-        "innovation"
+        "startups"
       ]
     },
     {
@@ -171,8 +186,7 @@
       "url": "https://www.veltrumtech.com",
       "type": "page",
       "topics": [
-        "ai",
-        "innovation"
+        "startups"
       ]
     },
     {
@@ -181,7 +195,6 @@
       "url": "https://bassi-tech.vercel.app/",
       "type": "page",
       "topics": [
-        "ai",
         "innovation"
       ]
     },
@@ -200,8 +213,7 @@
       "url": "https://chassis.thedatavessel.com",
       "type": "page",
       "topics": [
-        "ai",
-        "innovation"
+        "ai"
       ]
     },
     {
@@ -212,8 +224,7 @@
       "linkText": "Read More",
       "maxAgeDays": 14,
       "topics": [
-        "lifestyle",
-        "innovation"
+        "lifestyle"
       ]
     }
   ],
@@ -237,5 +248,9 @@
       ]
     },
     "headline": "Active verb, the company or product name, a number only if it is sourced. No clickbait, no hype words."
+  },
+  "hero": {
+    "kicker": "AI & Innovation \u00b7 Est. 2026",
+    "title": "AI & Innovation across Africa"
   }
 }

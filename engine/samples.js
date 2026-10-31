@@ -17,6 +17,7 @@ for (const file of files) {
   const errs = validateFactSheet(f);
   if (errs.length) { console.log('SKIP', file, errs.join('; ')); continue; }
   f.dek = dek || '';
+  await new Promise(r => setTimeout(r, 8));   // distinct timestamps keep the lead story newest
   const assets = selectAssets(f, cfg), qa = runQa(f, article, cfg, f.dek), r = publish(f, article, assets, qa, cfg);
   console.log(`${r.live ? 'LIVE ' : 'DRAFT'} ${r.slug}  assets=[${assets}]  qa=${qa.pass ? 'pass' : 'FAIL ' + qa.fails.join(' | ')}`);
 }

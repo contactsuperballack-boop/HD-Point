@@ -1,0 +1,89 @@
+{
+  "factSheet": {
+    "title": "AI on African farms: advice by SMS, satellites overhead and a low-adoption warning",
+    "storyType": "ecosystem",
+    "region": "Africa",
+    "embedUrl": null,
+    "claims": [
+      {
+        "id": "c1",
+        "text": "A 2026 systematic review of AI in East African agriculture identifies five main application areas: advisory services, precision agriculture, crop and pest monitoring, financial and market intelligence, and climate-smart agriculture.",
+        "sourceUrl": "https://onlinelibrary.wiley.com/doi/10.1155/tswj/5128133",
+        "basis": "verified"
+      },
+      {
+        "id": "c2",
+        "text": "The review finds that adoption of AI among smallholder farmers in East Africa remains relatively low and uneven.",
+        "sourceUrl": "https://onlinelibrary.wiley.com/doi/10.1155/tswj/5128133",
+        "basis": "verified"
+      },
+      {
+        "id": "c3",
+        "text": "It reports that in parts of East Africa, farmers using digital and AI-supported advisory services reported better crop management, increased yields and reduced input waste.",
+        "sourceUrl": "https://onlinelibrary.wiley.com/doi/10.1155/tswj/5128133",
+        "basis": "verified"
+      },
+      {
+        "id": "c4",
+        "text": "Kenya leads in AI use among smallholder farmers, while Ethiopia shows the lowest adoption, which the review links to access to smartphones and digital agricultural services.",
+        "sourceUrl": "https://onlinelibrary.wiley.com/doi/10.1155/tswj/5128133",
+        "basis": "verified"
+      },
+      {
+        "id": "c5",
+        "text": "Kenyan smallholders use tools including PlantVillage+ and Virtual Agronomist to get real-time advice on pest control, fertiliser use and crop disease detection.",
+        "sourceUrl": "https://iafrica.com/kenyan-smallholder-farmers-use-ai-apps-to-detect-crop-disease-and-cut-costs-as-agritech-spreads-across-africa/",
+        "basis": "verified"
+      },
+      {
+        "id": "c6",
+        "text": "A data scientist quoted by iAfrica says mobile tools such as WhatsApp bots could give smallholders real-time agronomic advice and address a shortage of agricultural extension officers.",
+        "sourceUrl": "https://iafrica.com/kenyan-smallholder-farmers-use-ai-apps-to-detect-crop-disease-and-cut-costs-as-agritech-spreads-across-africa/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c7",
+        "text": "In Ghana and Nigeria, SMS-based AI systems give localised advice on planting dates, fertiliser use and pest control, and the magazine says farmers reported yield increases of between 30% and 50% when advice was combined with quality inputs.",
+        "sourceUrl": "https://www.africanleadershipmagazine.co.uk/ai-and-africas-farms-closing-the-yield-gap-sustainably/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c8",
+        "text": "Nigeria's National Space Research and Development Agency, working with the Ministry of Agriculture, analyses satellite imagery every five days to map farm boundaries, monitor crop health and forecast national harvests months ahead.",
+        "sourceUrl": "https://www.africanleadershipmagazine.co.uk/ai-and-africas-farms-closing-the-yield-gap-sustainably/",
+        "basis": "verified"
+      },
+      {
+        "id": "c9",
+        "text": "Kenya's iShamba farmer helpline serves more than 1.2 million farmers through text and voice services.",
+        "sourceUrl": "https://www.africanleadershipmagazine.co.uk/ai-and-africas-farms-closing-the-yield-gap-sustainably/",
+        "basis": "verified",
+        "value": 1.2,
+        "unit": "million farmers",
+        "label": "iShamba farmers"
+      },
+      {
+        "id": "c10",
+        "text": "A Food and Agriculture Organization event brought together three young AI entrepreneurs from Zimbabwe, Nigeria and Kenya who support smallholder farmers, and highlighted that digital inclusion is essential for rural communities.",
+        "sourceUrl": "https://www.fao.org/africa/news-stories/news-detail/young-african-agripreneurs-share-ai-solutions-for-agrifood-systems-transformation/en",
+        "basis": "verified"
+      },
+      {
+        "id": "c11",
+        "text": "Femi Adekoya of Integrated Aerial Precision in Nigeria uses drones and AI to promote precision agriculture, according to the FAO.",
+        "sourceUrl": "https://www.fao.org/africa/news-stories/news-detail/young-african-agripreneurs-share-ai-solutions-for-agrifood-systems-transformation/en",
+        "basis": "verified"
+      },
+      {
+        "id": "c12",
+        "text": "Opportunity International signed with Safaricom to bring an AI chatbot, FarmerAI, to Kenya, piloting with potato farmers through DigiFarm, according to AVODA Group.",
+        "sourceUrl": "https://avodagroup.org/ai-agro-dealers-last-mile-agriculture/",
+        "basis": "verified"
+      }
+    ],
+    "flashcards": [],
+    "topic": "climate"
+  },
+  "dek": "Reports link AI advice and satellite monitoring to better crop decisions, but a 2026 review finds smallholder adoption is low and uneven.",
+  "article": "> **Key takeaways**\n>\n> - A 2026 systematic review finds five main uses of AI in East African agriculture, but says adoption among smallholders is low and uneven. [c1][c2]\n> - In parts of East Africa, farmers using AI-supported advice reported better crop management, increased yields and reduced input waste. [c3]\n> - Text, voice and WhatsApp are the delivery routes in the reports reviewed. [c6][c7][c9]\n> - From above, Nigeria's space agency analyses satellite imagery every five days to forecast harvests. [c8]\n\n## The landscape shift\n\nA 2026 systematic review of AI in East African agriculture identifies five main application areas: advisory services, precision agriculture, crop and pest monitoring, financial and market intelligence, and climate-smart agriculture. [c1]\n\nIn parts of East Africa, the review reports, farmers using digital and AI-supported advisory services reported better crop management, increased yields and reduced input waste. [c3]\n\n## What is being built\n\n### Advice on the phone\n\n- Kenyan smallholders use tools including PlantVillage+ and Virtual Agronomist to get real-time advice on pest control, fertiliser use and crop disease detection. [c5]\n- In Ghana and Nigeria, SMS-based AI systems give localised advice on planting dates, fertiliser use and pest control, and the magazine says farmers reported yield increases of between 30% and 50% when advice was combined with quality inputs. [c7]\n- Kenya's iShamba farmer helpline serves more than 1.2 million farmers through text and voice services. [c9]\n- Opportunity International signed with Safaricom to bring an AI chatbot, FarmerAI, to Kenya, piloting with potato farmers through DigiFarm, according to AVODA Group. [c12]\n- A data scientist quoted by iAfrica says mobile tools such as WhatsApp bots could give smallholders real-time agronomic advice and address a shortage of agricultural extension officers. [c6]\n\n### Eyes from above and in the field\n\n- Nigeria's National Space Research and Development Agency, working with the Ministry of Agriculture, analyses satellite imagery every five days to map farm boundaries, monitor crop health and forecast national harvests months ahead. [c8]\n- Femi Adekoya of Integrated Aerial Precision in Nigeria uses drones and AI to promote precision agriculture, according to the FAO. [c11]\n\n## Where the activity is\n\n| Country | What the sources report | Source |\n|---|---|---|\n| Kenya | Leads in AI use among smallholders; iShamba reaches more than 1.2 million farmers | [c4][c9] |\n| Nigeria | Satellite imagery analysed every five days for harvest forecasts | [c8] |\n| Ghana and Nigeria | SMS-based AI advice, with reported yield gains of 30% to 50% | [c7] |\n| Ethiopia | Lowest adoption in the review | [c4] |\n\n## Limits of the evidence\n\nThe review finds that adoption of AI among smallholder farmers in East Africa remains relatively low and uneven. [c2] It links Kenya's lead and Ethiopia's low adoption to access to smartphones and digital agricultural services. [c4] An FAO event highlighted that digital inclusion is essential for rural communities. [c10]"
+}

@@ -1,0 +1,87 @@
+{
+  "factSheet": {
+    "title": "Google's AI flood forecasts reach Nigeria: warnings days ahead and cash before the water rises",
+    "storyType": "product_launch",
+    "region": "Nigeria",
+    "topic": "climate",
+    "home": false,
+    "embedUrl": null,
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Google says its AI predicts river floods up to seven days before they strike and urban flash floods up to 24 hours before they hit.",
+        "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/flood-prediction-ai/",
+        "basis": "company-stated",
+        "value": 24,
+        "unit": "hours",
+        "label": "Flash-flood warning time"
+      },
+      {
+        "id": "c2",
+        "text": "Google says its flood forecasting now covers areas across 150 countries where more than 2 billion people live.",
+        "sourceUrl": "https://modernizingtech.com/news/google-is-using-ai-to-predict-floods-before-they-happen/",
+        "basis": "company-stated",
+        "value": 150,
+        "unit": "countries",
+        "label": "Countries covered"
+      },
+      {
+        "id": "c3",
+        "text": "The forecasts are available through Flood Hub and also appear in Google Search when people look for information on a flood in their area.",
+        "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/flood-prediction-ai/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c4",
+        "text": "For urban flash floods, Google built a method called Groundsource, which uses its Gemini AI to analyse historical news reports.",
+        "sourceUrl": "https://modernizingtech.com/news/google-is-using-ai-to-predict-floods-before-they-happen/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c5",
+        "text": "Google says Groundsource reviewed more than 5 million reports spanning roughly 20 years and helped create a dataset of about 2.6 million flood events.",
+        "sourceUrl": "https://modernizingtech.com/news/google-is-using-ai-to-predict-floods-before-they-happen/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c6",
+        "text": "In Kogi, Nigeria, one of West Africa's most flood-affected regions, GiveDirectly used Google's Flood Forecasting API to deliver cash to people before the water rose.",
+        "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/flood-prediction-ai/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c7",
+        "text": "Google says GiveDirectly found that the early cash helped families evacuate, protect assets and rebuild.",
+        "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/flood-prediction-ai/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c8",
+        "text": "Urban flash flooding was the hard problem because sensors almost never monitor it, according to Streamline Feed.",
+        "sourceUrl": "https://streamlinefeed.co.ke/news/google-ai-flood-forecasts-shield-two-billion-people",
+        "basis": "verified"
+      },
+      {
+        "id": "c9",
+        "text": "Flood Hub uses two integrated AI models: a hydrologic model that forecasts the amount of water flowing in a river, and an inundation model that predicts which areas will be affected and to what depth.",
+        "sourceUrl": "https://cities.google/flood-hub",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c10",
+        "text": "Google says the Groundsource method helps forecast floods in areas that lack local sensors.",
+        "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/flood-prediction-ai/",
+        "basis": "company-stated"
+      },
+      {
+        "id": "c11",
+        "text": "Researchers can access the predictions through Flood Hub, and can use open-source data and an API for their own disaster resilience research.",
+        "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/flood-prediction-ai/",
+        "basis": "company-stated"
+      }
+    ],
+    "flashcards": []
+  },
+  "dek": "Google says Flood Hub warns of river floods up to seven days ahead; in Kogi, Nigeria, GiveDirectly used it to send cash early.",
+  "article": "> **Key takeaways**\n>\n> - Google says its AI predicts river floods up to seven days ahead and urban flash floods up to 24 hours ahead. [c1]\n> - Its flood forecasting covers areas across 150 countries where more than 2 billion people live, Google says. [c2]\n> - In Kogi, Nigeria, GiveDirectly used the forecasts to deliver cash to people before the water rose. [c6]\n> - GiveDirectly found the early cash helped families evacuate, protect assets and rebuild, according to Google. [c7]\n\n## Why it matters\n\nUrban flash flooding was the hard problem because sensors almost never monitor it, according to Streamline Feed. [c8] For these floods Google built Groundsource, which uses its Gemini AI to analyse historical news reports. [c4]\n\n## What it does\n\n### Two models for river floods\n\nFlood Hub uses two integrated AI models: a hydrologic model that forecasts the amount of water flowing in a river, and an inundation model that predicts which areas will be affected and to what depth. [c9]\n\n### Flash floods from news archives\n\nGoogle says Groundsource reviewed more than 5 million reports spanning roughly 20 years and helped create a dataset of about 2.6 million flood events. [c5] It says the method helps forecast floods in areas that lack local sensors. [c10]\n\n## In Nigeria\n\nIn Kogi, Nigeria, one of West Africa's most flood-affected regions, GiveDirectly used Google's Flood Forecasting API to deliver cash to people before the water rose. [c6] Google says GiveDirectly found that the early cash helped families evacuate, protect assets and rebuild. [c7]\n\n## Availability\n\nThe forecasts are available through Flood Hub and also appear in Google Search when people look for information on a flood in their area. [c3] Researchers can access the predictions through Flood Hub, and can use open-source data and an API for their own disaster resilience research. [c11]"
+}

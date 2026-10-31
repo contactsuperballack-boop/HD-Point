@@ -2,7 +2,7 @@
 // Spam defences, in order: origin check, honeypot, per-IP rate limit (LIMITS KV), Cloudflare Turnstile (TURNSTILE_SECRET),
 // strict validation and size limit. The contact email is NOT written to the repo; it goes to the optional CONTACTS KV only.
 const TYPES = ['product_launch', 'model_launch', 'startup_feature', 'funding', 'skills_guide'];
-const TOPICS = ['ai', 'innovation', 'leisure', 'lifestyle'];
+const TOPICS = ['ai', 'innovation', 'climate', 'lifestyle', 'startups'];
 const MAX_PER_HOUR = 5;
 const clean = (s, n) => String(s ?? '').replace(/[\u0000-\u001f\u007f<>`]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, n);
 const url = u => { try { const x = new URL(String(u ?? '').trim()); return /^https?:$/.test(x.protocol) ? x.href : null; } catch { return null; } };

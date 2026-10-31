@@ -9,7 +9,7 @@ export async function GET(ctx: APIContext) {
   const digests = allDigests().filter((d) => !d.draft);
   const urls: { loc: string; lastmod?: string }[] = [
     ...['/', '/about/', '/how-we-verify/', '/events/', '/submit/', '/corrections/', '/data/', '/privacy/', ...(digests.length ? ['/digest/'] : [])].map((p) => ({ loc: site + p })),
-    ...TOPICS.filter((t) => posts.some((p) => t.match(p.data))).map((t) => ({ loc: `${site}/topics/${t.slug}/` })),
+    ...TOPICS.map((t) => ({ loc: `${site}/topics/${t.slug}/` })),
     ...posts.map((p) => ({ loc: `${site}/posts/${p.id}/`, lastmod: p.data.date.toISOString().slice(0, 10) })),
     ...digests.map((d) => ({ loc: `${site}/digest/${d.id}/`, lastmod: d.date.slice(0, 10) })),
   ];
