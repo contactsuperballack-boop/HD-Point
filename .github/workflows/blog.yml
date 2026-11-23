@@ -64,6 +64,12 @@ jobs:
             if grep -q '^draft: true' "$f"; then DRAFTS="$DRAFTS- \`$f\`\n"; fi
           done
           if [ -n "$DRAFTS" ]; then
-            printf "These posts are drafts and are not on the site yet.\n\nReview each one, then set \`draft: false\` in its front matter and push.\n\n$DRAFTS" > body.md
+            printf "These posts are drafts and are not on the site yet.\n\nRead each one. To publish: Actions > Approve posts > Run workflow, then paste the slug (the file name without .md), or all-passing for every draft that passed QA. Posts that failed QA need a fix first, or tick force.\n\n$DRAFTS" > body.md
             gh issue create --title "Posts awaiting review ($(date -u +%F))" --body-file body.md
           fi
+      - name: Open issue if the run failed
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "Blog run failed ($(date -u +%F))" --body "See ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. Common causes: missing or invalid ANTHROPIC_API_KEY, API quota, or every candidate story failing."

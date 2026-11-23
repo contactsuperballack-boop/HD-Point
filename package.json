@@ -11,7 +11,8 @@
     "export": "python3 engine/export.py",
     "watch": "python3 engine/watch.py",
     "samples": "node engine/samples.js",
-    "logo": "python3 brand/build_logo.py"
+    "logo": "python3 brand/build_logo.py",
+    "approve": "node engine/approve.js"
   },
   "dependencies": {
     "astro": "^5.0.0",

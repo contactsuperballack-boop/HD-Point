@@ -95,3 +95,40 @@ export function filterCandidates(items, cfg) {
   for (let n = 0; lists.some(l => n < l.length); n++) lists.forEach(l => l[n] && news.push(l[n]));
   return [...subs, ...news];
 }
+
+
+// 3) Run-to-run memory and full article text -------------------------------------------------
+// Feed items stay "fresh" for maxStoryAgeDays, so without a record the same story would be
+// re-extracted (and re-drafted under a slightly different title) on every daily run.
+export const SEEN_FILE = 'src/data/seen-urls.json';
+export const normalizeUrl = u => {
+  try {
+    const x = new URL(u); x.hash = '';
+    [...x.searchParams.keys()].filter(k => /^(utm_|fbclid|gclid|mc_)/i.test(k)).forEach(k => x.searchParams.delete(k));
+    return (x.origin + x.pathname.replace(/\/+$/, '') + x.search).toLowerCase();
+  } catch { return String(u || '').toLowerCase(); }
+};
+export function loadSeenUrls(claimsDir = 'src/data/claims', file = SEEN_FILE) {
+  const seen = new Set();
+  try { JSON.parse(fs.readFileSync(file, 'utf8')).forEach(u => seen.add(normalizeUrl(u))); } catch {}
+  if (fs.existsSync(claimsDir)) for (const f of fs.readdirSync(claimsDir).filter(f => f.endsWith('.json'))) {
+    try { JSON.parse(fs.readFileSync(path.join(claimsDir, f), 'utf8')).claims?.forEach(c => c.sourceUrl && seen.add(normalizeUrl(c.sourceUrl))); } catch {}
+  }
+  return seen;
+}
+export function saveSeenUrls(seen, file = SEEN_FILE) {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, JSON.stringify([...seen].sort(), null, 1) + '\n');
+}
+
+// The feed gives a short snippet. Read the article itself so the fact sheet is not built from a teaser.
+// Returns '' on any problem; the run then falls back to the snippet.
+export async function fetchArticleText(url, max = 9000) {
+  try {
+    const res = await fetch(url, { headers: { 'user-agent': 'HDPoint-feedreader/1.0', accept: 'text/html' }, signal: AbortSignal.timeout(15000), redirect: 'follow' });
+    if (!res.ok || !/html/i.test(res.headers.get('content-type') || '')) return '';
+    const html = (await res.text()).replace(/<(script|style|nav|footer|aside|form|header|noscript|svg)\b[\s\S]*?<\/\1>/gi, ' ');
+    const body = (html.match(/<article\b[\s\S]*?<\/article>/i) || html.match(/<main\b[\s\S]*?<\/main>/i) || [html])[0];
+    return strip(body).slice(0, max);
+  } catch { return ''; }
+}

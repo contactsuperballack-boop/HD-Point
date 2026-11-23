@@ -5,7 +5,7 @@
   "minSourcesNews": 2,
   "minSourcesPromo": 1,
   "postsPerRun": 3,
-  "model": "claude-sonnet-5-5",
+  "model": "claude-haiku-5-5",
   "requireSponsoredLabel": true,
   "assets": {
     "hero": true,
@@ -135,7 +135,7 @@
   "maxExtraAssets": 3,
   "autoPublishSponsored": false,
   "contactEmail": "info.hdpoint@gmail.com",
-  "siteUrl": "",
+  "siteUrl": "https://contactsuperballack-boop.github.io/HD-Point",
   "maxPerFeed": 4,
   "autoPublishTypes": [],
   "autoPublishGate": {
@@ -252,5 +252,6 @@
   "hero": {
     "kicker": "AI & Innovation \u00b7 Est. 2026",
     "title": "AI & Innovation across Africa"
-  }
+  },
+  "fullText": true
 }

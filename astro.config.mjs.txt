@@ -1,0 +1,12 @@
+import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
+import cfg from './config.json';
+
+const site = cfg.siteUrl || 'https://contactsuperballack-boop.github.io/HD-Point';
+const base = new URL(site).pathname.replace(/\/$/, '') || '/';
+
+export default defineConfig({
+  site,
+  base,
+  vite: { plugins: [tailwindcss()] },
+});
