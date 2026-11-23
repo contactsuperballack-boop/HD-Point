@@ -2,8 +2,8 @@ name: Deploy site
 on:
   push:
     branches: [main]
-  workflow_run:                      # pushes made with GITHUB_TOKEN don't trigger `push`, so chain after the generator
-    workflows: ["Generate posts"]
+  workflow_run:                      # pushes made with GITHUB_TOKEN don't trigger `push`, so chain after the generator and after approvals
+    workflows: ["Generate posts", "Approve posts"]
     types: [completed]
   workflow_dispatch:
 permissions:
